@@ -6,8 +6,8 @@
 
 ## 阅读顺序
 
-1. [决策简报](docs/DECISION_BRIEF.md)：问题、对象、边界与已核实的事实。
-2. [总计划](docs/MASTER_PLAN.md)：每阶段的交付物、工作上限和通过门槛。
+1. [总纲与主计划](docs/MASTER_PLAN.md)：完整业务闭环、12 个业务板块与 7 个执行阶段的映射、各阶段交接和通过门槛。
+2. [决策简报](docs/DECISION_BRIEF.md)：问题、对象、边界与已核实的事实。
 3. [数据与缺口规则](docs/DATA_POLICY.md)：证据等级、缺失数据处理和结论措辞。
 4. [阶段状态](docs/STAGE_STATUS.md)：当前进度和下一阶段。
 

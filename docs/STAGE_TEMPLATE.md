@@ -5,12 +5,14 @@
 ## Stage Review
 
 - **阶段与状态**：
+- **对应总纲板块**：`MASTER_PLAN.md` 中的业务板块及其交接物。
 - **本阶段决策问题**：
 - **本阶段产物**：文件路径、版本或提交号。
 - **Findings**：最多 3 条。
 - **Evidence**：每条对应来源、时间、口径或计算路径；标 A/B/C/D。
 - **Business meaning**：对用户、经营或经济性的意义。
 - **Decision impact**：改变了哪个选项或下一步实验？
+- **Hypothesis status**：已观察 / 多源支持 / 待验证 / 被证伪；注明判断依据。
 - **Unknowns / fallback**：缺什么数据，按什么规则降级？
 - **Checks actually run**：只写实际执行的检查与结果。
 - **Gate**：证据 / 业务 / 决策 / 相关性，逐项通过或说明失败。
