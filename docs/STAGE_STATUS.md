@@ -6,7 +6,8 @@
 |---|---|---|---|
 | 0 决策与范围 | 通过 | `DECISION_BRIEF.md` 已固定主决策、边界和官方资料起点 | 进入 Stage 1 |
 | 1 证据与 KPI | 通过 | `docs/kpi_tree.md` Stage Review；10 个来源、12 个 core 指标、14 条可得性记录及表契约，CSV/链接检查通过 | 进入 Stage 2 |
-| 2 市场与用户 | 降级通过 | `market/market_opportunity.md` Stage Review；33 条去重 VOC（仅 19 条直接涉及 Video Call）、3 直接竞品+2 替代、产品价值链与 H1–H3；CSV 汇总复算及独立审阅完成 | 进入 Stage 3；保留 VOC 代表性与原 PDF 访问限制 |
+| 2 市场与用户 | 降级通过 | `market/market_opportunity.md` Stage Review；33 条去重 VOC（仅 19 条直接涉及 Video Call）、3 直接竞品+2 替代、产品价值链与 H1–H3；CSV 汇总复算及独立审阅完成 | 原定进入 Stage 3；现先进行 Stage 2.1 证据补强，保留原 PDF 访问限制 |
+| 2.1 用户证据补强 | 进行中 | `market/source_access_review.md`：三个工具已隔离安装并完成离线检查；来源准入限制已记录，尚无新增采集或复核结果 | 先取得可用于研究的来源；再小量试采、质量复核及一次决策审阅 |
 | 3 经营与 Driver | 未开始 | — | Stage 2 Gate 后执行 |
 | 4 量化机会 | 未开始 | — | Stage 3 Gate 后执行 |
 | 5 决策与实验 | 未开始 | — | Stage 4 Gate 后执行 |
@@ -14,7 +15,7 @@
 
 ## 当前下一步
 
-只推进 **Stage 3 经营与 Driver**。按 Stage 1 指标字典提取公司级八季数据，结合 Stage 2 的人群和机制假设解释趋势；公司级数据不得归因 Video Call。
+优先完成 **Stage 2.1 用户证据补强**：来源工具已配置，下一步先解决可使用的数据来源，再针对 33 条探索性 VOC 的相关性和来源局限做一次有边界的补充；见 `docs/STAGE2_EVIDENCE_REFRESH.md`。Stage 3 的八季公司级数据整理可独立准备，正式解释与策略建议需结合补强后的证据；公司级变化不得归因 Video Call。
 
 ## 候选待办（不在当前阶段展开）
 

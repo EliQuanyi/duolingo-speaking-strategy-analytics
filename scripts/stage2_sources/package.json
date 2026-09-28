@@ -1,0 +1,12 @@
+{
+  "name": "stage2-source-adapters",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local, offline-verified dependencies for Stage 2.1 source assessment",
+  "scripts": {
+    "check:offline": "node check_app_store.cjs"
+  },
+  "dependencies": {
+    "app-store-scraper": "0.18.0"
+  }
+}

@@ -6,3 +6,5 @@
 - [`voc_analysis.md`](voc_analysis.md)、[`voc_sample_log.csv`](voc_sample_log.csv)、[`../data/public/voc_theme_summary.csv`](../data/public/voc_theme_summary.csv)：33 条去重公开样本的采样、匿名释义和可复算编码。其中直接涉及 Video Call 的 19 条均来自 Reddit，结论只用于生成假设。
 
 公司级季度经营分析进入 Stage 3。缺失的自然使用、功能级留存、付费和 AI 成本仍需后续数据或实验验证。
+
+Stage 2.1 的新增任务与来源准入审查见 [`source_access_review.md`](source_access_review.md)。三个候选采集项目已在本地配置并完成离线检查；尚未取得可用于在线试采的来源准入，当前没有新增 VOC。

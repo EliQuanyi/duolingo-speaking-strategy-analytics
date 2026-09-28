@@ -9,6 +9,7 @@ __pycache__/
 .ipynb_checkpoints/
 .pytest_cache/
 .mypy_cache/
+node_modules/
 
 # Local, potentially restricted, or large data
 data/raw/
