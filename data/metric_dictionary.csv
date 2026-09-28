@@ -1,0 +1,7 @@
+metric_id,metric,definition,formula,unit,time_grain,source_id,tier,business_meaning,limitation,status
+M001,DAU,Average daily unique active users in the quarter,Reported by company,million users,quarter,S002,A,Engagement scale,Not feature-level activity,seed
+M002,MAU,Average monthly unique active users in the quarter,Reported by company,million users,quarter,S002,A,Active user reach,Not feature-level activity,seed
+M003,CURR,Share of current-user DAUs returning the next day,Reported by company,percent,quarter,S001,A,Leading retention indicator,Definition differs from cohort D7 or D30 retention,seed
+M004,Paid subscribers,Unique paying users with active subscription at period end,Reported by company,million users,quarter-end,S002,A,Subscription scale,Excludes free trials and nonpaying family members,seed
+M005,Subscription bookings,Amounts received for subscription purchases,Reported by company,USD million,quarter,S002,A,Subscription sales trend,Not recognized subscription revenue,seed
+M006,Total bookings,Subscription bookings plus ads DET and IAP bookings,Reported by company,USD million,quarter,S002,A,Commercial demand,Differs from GAAP revenue,seed

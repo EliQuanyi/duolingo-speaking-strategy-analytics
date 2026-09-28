@@ -1,0 +1,25 @@
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Local, potentially restricted, or large data
+data/raw/
+data/processed/
+data/private/
+*.parquet
+*.sqlite
+*.db
+
+# Generated outputs and OS files
+reports/generated/
+analysis/figures/
+.DS_Store
+Thumbs.db
