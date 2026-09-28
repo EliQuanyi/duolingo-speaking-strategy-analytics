@@ -1,0 +1,78 @@
+group_type,group_value,theme_code,code_role,n,denominator,share,unit
+all,ALL,PRACTICE,primary,9,33,0.2727,sampled_items
+all,ALL,FEEDBACK,primary,4,33,0.1212,sampled_items
+all,ALL,FLOW,primary,7,33,0.2121,sampled_items
+all,ALL,RELIABILITY,primary,5,33,0.1515,sampled_items
+all,ALL,LEVEL,primary,4,33,0.1212,sampled_items
+all,ALL,ACCESS,primary,3,33,0.0909,sampled_items
+all,ALL,PRIVACY,primary,1,33,0.0303,sampled_items
+all,ALL,PRACTICE,any,15,33,0.4545,sampled_items
+all,ALL,FEEDBACK,any,8,33,0.2424,sampled_items
+all,ALL,FLOW,any,12,33,0.3636,sampled_items
+all,ALL,RELIABILITY,any,8,33,0.2424,sampled_items
+all,ALL,LEVEL,any,11,33,0.3333,sampled_items
+all,ALL,ACCESS,any,4,33,0.1212,sampled_items
+all,ALL,VALUE,any,7,33,0.2121,sampled_items
+all,ALL,PRIVACY,any,1,33,0.0303,sampled_items
+platform,Reddit,PRACTICE,primary,6,19,0.3158,sampled_items
+platform,Reddit,FEEDBACK,primary,1,19,0.0526,sampled_items
+platform,Reddit,FLOW,primary,3,19,0.1579,sampled_items
+platform,Reddit,RELIABILITY,primary,3,19,0.1579,sampled_items
+platform,Reddit,LEVEL,primary,2,19,0.1053,sampled_items
+platform,Reddit,ACCESS,primary,3,19,0.1579,sampled_items
+platform,Reddit,PRIVACY,primary,1,19,0.0526,sampled_items
+platform,Reddit,PRACTICE,any,10,19,0.5263,sampled_items
+platform,Reddit,FEEDBACK,any,2,19,0.1053,sampled_items
+platform,Reddit,FLOW,any,8,19,0.4211,sampled_items
+platform,Reddit,RELIABILITY,any,3,19,0.1579,sampled_items
+platform,Reddit,LEVEL,any,5,19,0.2632,sampled_items
+platform,Reddit,ACCESS,any,4,19,0.2105,sampled_items
+platform,Reddit,VALUE,any,5,19,0.2632,sampled_items
+platform,Reddit,PRIVACY,any,1,19,0.0526,sampled_items
+platform,Trustpilot,PRACTICE,primary,3,14,0.2143,sampled_items
+platform,Trustpilot,FEEDBACK,primary,3,14,0.2143,sampled_items
+platform,Trustpilot,FLOW,primary,4,14,0.2857,sampled_items
+platform,Trustpilot,RELIABILITY,primary,2,14,0.1429,sampled_items
+platform,Trustpilot,LEVEL,primary,2,14,0.1429,sampled_items
+platform,Trustpilot,PRACTICE,any,5,14,0.3571,sampled_items
+platform,Trustpilot,FEEDBACK,any,6,14,0.4286,sampled_items
+platform,Trustpilot,FLOW,any,4,14,0.2857,sampled_items
+platform,Trustpilot,RELIABILITY,any,5,14,0.3571,sampled_items
+platform,Trustpilot,LEVEL,any,6,14,0.4286,sampled_items
+platform,Trustpilot,VALUE,any,2,14,0.1429,sampled_items
+product,Duolingo,RELIABILITY,primary,1,1,1.0000,sampled_items
+product,Duolingo,FEEDBACK,any,1,1,1.0000,sampled_items
+product,Duolingo,RELIABILITY,any,1,1,1.0000,sampled_items
+product,Duolingo Video Call,PRACTICE,primary,6,19,0.3158,sampled_items
+product,Duolingo Video Call,FEEDBACK,primary,1,19,0.0526,sampled_items
+product,Duolingo Video Call,FLOW,primary,3,19,0.1579,sampled_items
+product,Duolingo Video Call,RELIABILITY,primary,3,19,0.1579,sampled_items
+product,Duolingo Video Call,LEVEL,primary,2,19,0.1053,sampled_items
+product,Duolingo Video Call,ACCESS,primary,3,19,0.1579,sampled_items
+product,Duolingo Video Call,PRIVACY,primary,1,19,0.0526,sampled_items
+product,Duolingo Video Call,PRACTICE,any,10,19,0.5263,sampled_items
+product,Duolingo Video Call,FEEDBACK,any,2,19,0.1053,sampled_items
+product,Duolingo Video Call,FLOW,any,8,19,0.4211,sampled_items
+product,Duolingo Video Call,RELIABILITY,any,3,19,0.1579,sampled_items
+product,Duolingo Video Call,LEVEL,any,5,19,0.2632,sampled_items
+product,Duolingo Video Call,ACCESS,any,4,19,0.2105,sampled_items
+product,Duolingo Video Call,VALUE,any,5,19,0.2632,sampled_items
+product,Duolingo Video Call,PRIVACY,any,1,19,0.0526,sampled_items
+product,Praktika AI,PRACTICE,primary,2,8,0.2500,sampled_items
+product,Praktika AI,FEEDBACK,primary,1,8,0.1250,sampled_items
+product,Praktika AI,FLOW,primary,4,8,0.5000,sampled_items
+product,Praktika AI,RELIABILITY,primary,1,8,0.1250,sampled_items
+product,Praktika AI,PRACTICE,any,3,8,0.3750,sampled_items
+product,Praktika AI,FEEDBACK,any,2,8,0.2500,sampled_items
+product,Praktika AI,FLOW,any,4,8,0.5000,sampled_items
+product,Praktika AI,RELIABILITY,any,3,8,0.3750,sampled_items
+product,Praktika AI,LEVEL,any,3,8,0.3750,sampled_items
+product,Praktika AI,VALUE,any,1,8,0.1250,sampled_items
+product,Talkpal,PRACTICE,primary,1,5,0.2000,sampled_items
+product,Talkpal,FEEDBACK,primary,2,5,0.4000,sampled_items
+product,Talkpal,LEVEL,primary,2,5,0.4000,sampled_items
+product,Talkpal,PRACTICE,any,2,5,0.4000,sampled_items
+product,Talkpal,FEEDBACK,any,3,5,0.6000,sampled_items
+product,Talkpal,RELIABILITY,any,1,5,0.2000,sampled_items
+product,Talkpal,LEVEL,any,3,5,0.6000,sampled_items
+product,Talkpal,VALUE,any,1,5,0.2000,sampled_items
