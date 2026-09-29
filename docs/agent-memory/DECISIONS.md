@@ -7,4 +7,5 @@
 - 2026-09-28：Stage 1 以八份季度股东信构建后续公司级趋势来源窗（2024 Q3–2026 Q2）；CURR 的公开 84% 仅按披露时点记录，不组成连续季度序列；Video Call 采用、因果留存和单位成本保留为内部数据需求。依据：SEC 股东信和 2026 Q2 10-Q 的披露口径，详见 `docs/kpi_tree.md`。
 - 2026-09-28：Stage 2 将日本语母语中级英语学习者作为**优先验证人群**，不是确定的最终扩张市场；初学者引导式 Falstaff 与中级开放式 Lily 分开验证。依据：2024 Q3 英语细分使用披露、DRR-25-06 完成者研究及 Falstaff 摘要，详见 `market/market_opportunity.md`。
 - 2026-09-28：市场/产品判断同时看开口参与、独立口语能力、体验质量、权益曝光与成本；自评信心、说词量或公司级 DAU 单独均不足以证明产品价值。VOC 仅用于提出假设，Stage 2 因直接 Video Call 样本与原 PDF 访问限制降级通过。依据：Stage 2 来源审阅、VOC 编码与独立复核。
-- 2026-09-29：Stage 2.1 竞品与市场补强按 H1/H2/H3 的相同用户任务做六维比较，使用逐主张来源账本和条件性商业价值链；不以功能清单、跨平台 VOC 比例或无同口径的综合分替代证据。用户提供的评论摘要先作待核验候选材料。依据：`docs/STAGE2_REINFORCEMENT_STANDARD.md` 与 `docs/STAGE2_INPUT_INTAKE.md` 的接收初检。
+- 2026-09-29：Stage 2.1 竞品与市场补强按 H1/H2/H3 的相同用户任务做六维比较，使用逐主张来源账本和条件性商业价值链；不以功能清单、跨平台 VOC 比例或无同口径的综合分替代证据。用户已亲自确认所供数据的真实性与来源；自选、编码可复算性及分层缺失仍限定结论。依据：`docs/STAGE2_REINFORCEMENT_STANDARD.md`、`docs/STAGE2_INPUT_INTAKE.md`。
+- 2026-09-29：Speak 和 ELSA 也已把 AI 对话接入课程或学习路径，不能把“课程整合”称为 Duolingo 独有优势。H1 优先测试自然使用下的有效开口与盲评迁移；H2 在英语界面初学西语场景比较引导机制；H3 在功能级成本与订阅层级替代可观测后测试有限试用。依据：`market/competitor_claims.csv` 与 `market/competitor_scenario_review.md`。
