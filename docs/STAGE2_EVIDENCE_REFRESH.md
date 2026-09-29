@@ -1,5 +1,7 @@
 # Stage 2.1 — 用户证据补强执行卡
 
+本执行卡的 VOC、竞品、市场逻辑链与收束判据，按 [`STAGE2_REINFORCEMENT_STANDARD.md`](STAGE2_REINFORCEMENT_STANDARD.md) 细化执行；当前 298 条用户提供样本的接收和未核验项见 [`STAGE2_INPUT_INTAKE.md`](STAGE2_INPUT_INTAKE.md)。
+
 ## 目的与边界
 
 回答同一个问题：哪些 Speaking / Video Call 体验值得优先验证，现有公开证据能支持到什么程度？以 **Duolingo Video Call 直接体验**为核心；一般 Speaking 和竞品体验分别标记，只作机制或替代选择的佐证。保留首轮 33 条 VOC 的历史记录，不把 77 行主题汇总算作新增样本，不用公开评论估计功能留存或收入效果。
