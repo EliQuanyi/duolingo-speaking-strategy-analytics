@@ -1,6 +1,6 @@
 # Stage 2.1 市场与竞品证据补强标准
 
-**版本：2026-09-29 执行版。竞品逐主张证据与同场景比较已完成，Stage 2.1 总审阅未完成。**适用于 Stage 2.1 的 VOC、竞品、市场机会与产品价值链；与 [`STAGE2_EVIDENCE_REFRESH.md`](STAGE2_EVIDENCE_REFRESH.md) 一起约束后续执行。既有 Stage 2 “降级通过”结论是起点，不因新增附件自动升级。
+**版本：2026-09-30 执行与收束版。Stage 2.1 总审阅已按本标准完成，结论为降级通过。**适用于 Stage 2.1 的 VOC、竞品、市场机会与产品价值链；与 [`STAGE2_EVIDENCE_REFRESH.md`](STAGE2_EVIDENCE_REFRESH.md) 一起约束后续执行。既有 Stage 2 “降级通过”结论是起点，不因新增附件自动升级；实际结果见 [`../market/stage2_decision_memo.md`](../market/stage2_decision_memo.md)。
 
 ## 1. 唯一决策与研究单位
 
@@ -39,8 +39,8 @@ VOC 质量报告需按平台、月份、帖子/评论、采样方法分别列出
 | 顺序 | 必要工作 | 收束物与停止条件 |
 |---|---|---|
 | 0 来源接收 | 保留文件哈希、合法使用/再分发判断，区分提供者说法与实际复核。 | `STAGE2_INPUT_INTAKE.md`；平台不准入时只保留允许的本地研究输入与方法，不向 public Git 上传整批记录。 |
-| 1 数据质量 | 对齐 456/454、字段缺失、URL 粒度、日期类型与来源覆盖；获得原始标签/抽检材料后做按来源和主题分层的人工复核，记录分歧。 | `market/voc_quality_review.md` 与经核验的 `voc_sample_log_v2.csv`；没有原文/标签证据时明确降级，不伪称独立复核。 |
-| 2 竞品证据 | 在 H1/H2/H3 下补六维同口径比较，一项主张一条来源；记录动态权益和价格的有效日。 | `market/competitor_claims.csv`、修订矩阵与 `competitor_notes.md`；保持 3+2，不做无依据总分。 |
+| 1 数据质量 | 对齐 456/454、字段缺失、URL 粒度、日期类型与来源覆盖；获得原始标签/抽检材料后做按来源和主题分层的人工复核，记录分歧。 | `market/voc_quality_review.md`；因原文/标签材料缺失，本轮**未生成**声称已核验的 `voc_sample_log_v2.csv`，按第 5 节降级。 |
+| 2 竞品证据 | 在 H1/H2/H3 下补六维同口径比较，一项主张一条来源；记录动态权益和价格的有效日。 | `market/competitor_claims.csv` 与新版 `market/competitor_evidence_v2.csv`、`competitor_scenario_review.md` 取代原矩阵的正式证据/比较作用；原 `competitor_matrix.csv` 仅保留目录，保持 3+2，不做无依据总分。 |
 | 3 市场与机制 | 将真实痛点、替代选择和 Duolingo 待测优势连到行为、学习、商业与成本；保留相反案例。 | 修订 `market_opportunity.md`，最多 3 条逻辑链和一页 `stage2_decision_memo.md`。 |
 | 4 一次决策审阅 | 按下方 Gate 复核，交给 Stage 3/4/5，停止继续扩张研究范围。 | `STAGE_STATUS.md` 与 Stage Review：证据等级、实际检查、最大未知、下一行动。 |
 

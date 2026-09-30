@@ -2,7 +2,7 @@
 
 更新：2026-09-28。研究对象是 Duolingo 的口语练习体系，重点检验 Video Call 下一步的目标用户与验证顺序。本文是外部公开资料分析，不包含 Duolingo 内部功能数据。
 
-> **Stage 2.1 交接（2026-09-29）**：本页保留原 Stage 2 基线。更新后的逐主张竞品来源与 H1–H3 六维同场景比较见 [`competitor_scenario_review.md`](competitor_scenario_review.md)；用户新提供样本的来源真实性已由用户确认，但其自选与分层限制仍适用。后续策略判断优先引用 Stage 2.1 评审。
+> **Stage 2.1 交接（2026-09-29）**：本页保留原 Stage 2 基线。最新决策顺序与 Gate 以 [`stage2_decision_memo.md`](stage2_decision_memo.md) 为准；竞品逐项证据与 H1–H3 同场景评审见 [`competitor_evidence_v2.csv`](competitor_evidence_v2.csv)、[`competitor_scenario_review.md`](competitor_scenario_review.md)。用户新提供的 298 条仅是 Duolingo 用户态度，质量限制见 [`voc_quality_review.md`](voc_quality_review.md)，**不可与竞品体验混算**。
 
 ## 1. 决策摘要
 

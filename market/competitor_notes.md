@@ -1,6 +1,6 @@
 # Stage 2 竞品矩阵说明（2026-09-28）
 
-> **Stage 2.1 更新（2026-09-29）**：逐主张官方来源、适用地区/权益/时间及 H1–H3 同场景商业评审见 [`competitor_claims.csv`](competitor_claims.csv) 和 [`competitor_scenario_review.md`](competitor_scenario_review.md)。本页保留 Stage 2 的早期观察；后续决策以新评审为准。Speak 和 ELSA 也有课程或学习路径内的 AI 对话，因此不能把“课程整合”写成 Duolingo 独有优势。
+> **Stage 2.1 更新（2026-09-29）**：Duolingo 基准与替代供给见 [`competitor_claims.csv`](competitor_claims.csv)，三家直接竞品的逐项证据、地区/权益/版本限制见 [`competitor_evidence_v2.csv`](competitor_evidence_v2.csv)，H1–H3 同场景评审见 [`competitor_scenario_review.md`](competitor_scenario_review.md)。本页保留 Stage 2 的早期观察；后续决策以新评审为准。Speak 有课程和 Free Talk，但特定 Free Talk 版本与课程入口分开；ELSA 新版的 Role-Play Lab 位于 AI Chats，AI Conversation Coach 位于 Coach。不能把不同版本/入口拼成一个已普遍可用的功能。
 
 `competitor_matrix.csv` 以产品为粒度，仅覆盖 3 个直接口语产品、2 个替代方案和 Duolingo Video Call 基准。字段均为 UTF-8 文本；`source_urls` 用 `|` 分隔完整官方 URL；`access_date` 为页面查阅日期。`evidence_A_company_statement` 表示 Duolingo 的披露和产品陈述，`evidence_B_official_product` 表示竞品自己的产品/帮助页面；两者均不等于独立效果验证。`target_job` 和 `access_and_friction` 含基于所列功能的分析者归纳，其余字段尽量描述页面可核对的产品事实。价格仅记录收费机制，因为币种、地区、优惠、渠道和导师可改变标价。官方网页内容版权归各公司，CSV 只保留概括性事实和链接，不收录评论原文、宣传语或页面截图。
 
