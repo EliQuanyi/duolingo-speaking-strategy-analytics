@@ -1,0 +1,9 @@
+parameter,expression,meaning,condition,empirical_status
+m_T,d(v_variable)/d(m_T)=+1,Treatment contribution increases variable net value one-for-one,"Same population, accounting period and definitions; hold other terms fixed",accounting_identity_not_measured_response
+m_C,d(v_variable)/d(m_C)=-1,A higher control contribution reduces incremental value,Do not assume a zero-income control,accounting_identity_not_measured_response
+c_T,d(v_variable)/d(c_T)=-1,Treatment serving cost reduces incremental value,"Include failures, retries and paid follow-on without double counting",accounting_identity_not_measured_response
+c_C,d(v_variable)/d(c_C)=+1,Baseline serving cost belongs in the contrast,Absolute arm costs nonnegative; incremental cost may have either sign,accounting_identity_not_measured_response
+fixed_cost,V=sum_s(N_s*delta_v_s)-F; dV/dF=-1,Only decision-incremental fixed expense reduces policy value,No allocation to normalized example populations; no sunk costs,accounting_identity_not_measured_response
+break_even,delta_m >= delta_c + F/N,Minimum contribution condition for one explicitly scoped deployment population,"Real N>0, matched H, contribution excludes AI; no arbitrary numeric threshold",symbolic_boundary_not_empirical_threshold
+quota,offer_workload <= attempt_cap*enforced_workload_cap,An enforceable quota bounds only the offer workload,"Caps and billable mapping must be real; excludes paid follow-on, other cost and F",design_constraint_not_learning_or_total_cost_bound
+learning_budget,delta_cost_total <= approved_incremental_learning_budget,Teaching investment may use a real budget plus separate learning guardrails,Budget is a management choice; do not monetize test-score points or impose a zero-profit goal automatically,decision_rule_requires_actual_budget_and_learning_evidence

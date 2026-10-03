@@ -1,0 +1,26 @@
+{
+  "version": "Stage 3 v1.2",
+  "reviewed_on": "2026-10-02",
+  "status": "passed",
+  "checks": {
+    "company_input_qa": "passed",
+    "study_arm_counts_units_source_links": "passed",
+    "base_bridge_matches_three_existing_headline_changes": "passed",
+    "dau_mau_frequency_bridge_reconciles": "passed",
+    "weighted_excluded_mean_identity_six_scenarios": "passed",
+    "no_shift_recovers_observed_post_mean_difference": "passed",
+    "equality_threshold_has_zero_difference": "passed",
+    "same_shift_and_different_arm_counts_handled": "passed"
+  },
+  "rows": {
+    "stage3_base_period_bridge.csv": 3,
+    "stage3_learning_selection_sensitivity.csv": 6
+  },
+  "sha256": {
+    "data/public/company_quarterly_metrics.csv": "937a01ab139393fb92b7826d3a89d800add7d596a58072d5f684062ff6aba2e9",
+    "data/public/stage3_learning_study_inputs.csv": "c12101a41efd2a12b964fa2174488590b5a4809bef0a0cedd66669f3c6bc72b3",
+    "data/public/stage3_base_period_bridge.csv": "394c9afad6cf3c140f2654e618d53415c8b5b967a07367907c80b0834bb4fbbe",
+    "data/public/stage3_learning_selection_sensitivity.csv": "7786d12f8b7386379e098c3d5644fd99ea33c1df7213f01d9d166d54c758e6f0"
+  },
+  "inference_boundary": "Base bridge is descriptive; selection sensitivity is hypothetical, not recovered ITT or ROI"
+}

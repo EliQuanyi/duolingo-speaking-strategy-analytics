@@ -1,0 +1,1140 @@
+{
+  "version": "duolingo-analysis-v1.1-closeout-stage4-v2-stage5-v1",
+  "frozen_on": "2026-10-03",
+  "product_evidence_cutoff": "2026-10-02",
+  "company_quarters": "2024Q3–2026Q2",
+  "build_from": "explicit allowlist in scripts/build_final_data_package.py",
+  "files": [
+    {
+      "path": "data/source_register.csv",
+      "bytes": 10850,
+      "sha256": "d1a6176f432496e35334e7939ce60049757d5cf62e7c18f0f621c1b8d8469946",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 21,
+      "columns": [
+        "source_id",
+        "tier",
+        "title",
+        "publisher",
+        "url",
+        "published_on",
+        "period_covered",
+        "accessed_on",
+        "geography_user_scope",
+        "source_locator",
+        "planned_use",
+        "limitation",
+        "redistribution",
+        "verification_status"
+      ],
+      "grain": "一份来源登记",
+      "primary_key": [
+        "source_id"
+      ],
+      "unit_period_scope": "发布/覆盖/访问日期分列；21项不是独立研究数",
+      "field_definition_ref": "docs/DATA_POLICY.md",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/metric_dictionary.csv",
+      "bytes": 5277,
+      "sha256": "f4fc8657bbfa2684587b7af4674bad784545181e9b0df7044e98e1940ecbed38",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 14,
+      "columns": [
+        "metric_id",
+        "metric",
+        "priority",
+        "definition",
+        "formula",
+        "unit",
+        "time_grain",
+        "population_and_window",
+        "aggregation_type",
+        "source_id",
+        "tier",
+        "business_meaning",
+        "limitation",
+        "status"
+      ],
+      "grain": "一个公司或未来功能指标定义",
+      "primary_key": [
+        "metric_id"
+      ],
+      "unit_period_scope": "单位和期间逐行；定义不是观测",
+      "field_definition_ref": "docs/kpi_tree.md",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/data_availability.csv",
+      "bytes": 5074,
+      "sha256": "a646f0acba1e6e77df9f2a8e79ec6e9e588b07a348356ac2b2224e653627e741",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 14,
+      "columns": [
+        "metric_id",
+        "priority",
+        "availability_class",
+        "evidence_tier",
+        "observed_coverage",
+        "source_ids",
+        "decision_use",
+        "critical_gap",
+        "fallback",
+        "allowed_claim",
+        "blocked_claim"
+      ],
+      "grain": "一个指标可得性/缺口判断",
+      "primary_key": [
+        "metric_id"
+      ],
+      "unit_period_scope": "公开公司与内部功能粒度分开",
+      "field_definition_ref": "docs/DATA_POLICY.md",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/company_quarterly_metrics.csv",
+      "bytes": 31927,
+      "sha256": "937a01ab139393fb92b7826d3a89d800add7d596a58072d5f684062ff6aba2e9",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 64,
+      "columns": [
+        "period_start",
+        "period_end",
+        "fiscal_year",
+        "fiscal_quarter",
+        "metric_id",
+        "value",
+        "unit",
+        "aggregation_type",
+        "scope",
+        "source_id",
+        "source_locator",
+        "accessed_on",
+        "transformation_note",
+        "original_value",
+        "original_unit",
+        "published_on",
+        "source_url",
+        "evidence_label",
+        "precision_million",
+        "reported_yoy_pct",
+        "reported_yoy_source_id",
+        "reported_yoy_locator",
+        "reported_yoy_precision_pp",
+        "derivation_type",
+        "input_lineage"
+      ],
+      "grain": "一个公司季度指标",
+      "primary_key": [
+        "period_end",
+        "metric_id"
+      ],
+      "unit_period_scope": "2024Q3–2026Q2；million users/accounts、USD million或ratio逐行",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#公司指标与派生",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/company_comparison_baselines.csv",
+      "bytes": 12115,
+      "sha256": "565669c38a08de08523e60fceee68061a7fd4a14ef9450c29c7878b2e5b3bbd3",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 28,
+      "columns": [
+        "period_start",
+        "period_end",
+        "fiscal_year",
+        "fiscal_quarter",
+        "metric_id",
+        "value",
+        "unit",
+        "aggregation_type",
+        "scope",
+        "source_id",
+        "source_locator",
+        "accessed_on",
+        "transformation_note",
+        "original_value",
+        "original_unit",
+        "published_on",
+        "source_url",
+        "evidence_label",
+        "precision_million",
+        "reported_yoy_pct",
+        "reported_yoy_source_id",
+        "reported_yoy_locator",
+        "reported_yoy_precision_pp",
+        "derivation_type",
+        "input_lineage"
+      ],
+      "grain": "一个上年比较基期指标",
+      "primary_key": [
+        "period_end",
+        "metric_id"
+      ],
+      "unit_period_scope": "2023Q3–2024Q2；与主表同单位，仅比较用途",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#公司指标与派生",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/product_timeline.csv",
+      "bytes": 7638,
+      "sha256": "9b660a4183febadd9d54e331ed00c5d96dc4971d076588635d9120958617d665",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 16,
+      "columns": [
+        "event_id",
+        "event_date",
+        "event_date_precision",
+        "event_window_start",
+        "event_window_end",
+        "reported_on",
+        "feature",
+        "tier",
+        "platform",
+        "language_or_market",
+        "rollout_scope_text",
+        "claim_type",
+        "event_type",
+        "status",
+        "source_id",
+        "source_url",
+        "source_locator",
+        "accessed_on",
+        "limitation",
+        "event_date_basis"
+      ],
+      "grain": "一项披露事件或计划",
+      "primary_key": [
+        "event_id"
+      ],
+      "unit_period_scope": "发生日期可未知；reported_on为披露日",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#时间线与对账",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/source_cross_checks.csv",
+      "bytes": 4422,
+      "sha256": "37ace655c1dfea7744cb4021d1d43b3249cfa018e9a6c0925712e4f157a8eb02",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 32,
+      "columns": [
+        "period_end",
+        "metric_id",
+        "primary_value",
+        "comparison_value",
+        "absolute_difference_million",
+        "primary_precision_million",
+        "comparison_precision_million",
+        "tolerance_million",
+        "consistent_with_rounding",
+        "primary_source_id",
+        "comparison_source_id",
+        "comparison_source_locator"
+      ],
+      "grain": "一项双来源舍入对账",
+      "primary_key": [
+        "period_end",
+        "metric_id",
+        "comparison_source_id"
+      ],
+      "unit_period_scope": "32行不是新增测量；容差不是CI",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#时间线与对账",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/business_diagnostics.csv",
+      "bytes": 22936,
+      "sha256": "7b34ca06cdc66b29f3d7ca1a5bb434150dfa5695e4e535439b819dc9145254ca",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 64,
+      "columns": [
+        "period_start",
+        "period_end",
+        "fiscal_year",
+        "fiscal_quarter",
+        "metric_id",
+        "value",
+        "unit",
+        "aggregation_type",
+        "scope",
+        "source_id",
+        "calculation_label",
+        "yoy_baseline_period_end",
+        "yoy_baseline_value",
+        "yoy_baseline_source_id",
+        "yoy_pct",
+        "yoy_rounding_low_pct",
+        "yoy_rounding_high_pct",
+        "qoq_baseline_period_end",
+        "qoq_baseline_value",
+        "qoq_baseline_source_id",
+        "qoq_pct",
+        "qoq_rounding_low_pct",
+        "qoq_rounding_high_pct",
+        "reported_yoy_pct",
+        "reported_yoy_source_id",
+        "reported_yoy_locator",
+        "reported_yoy_precision_pp"
+      ],
+      "grain": "一个公司季度描述指标",
+      "primary_key": [
+        "period_end",
+        "metric_id"
+      ],
+      "unit_period_scope": "公开值及yoy/qoq比较；舍入界非CI",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#公司指标与派生",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/engagement_decomposition.csv",
+      "bytes": 3793,
+      "sha256": "a9882dc9aaf8f7ef4588ec3009caaf81759b99b657faffecfffeb4dcb8133e17",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 16,
+      "columns": [
+        "period_end",
+        "fiscal_year",
+        "fiscal_quarter",
+        "comparison",
+        "baseline_period_end",
+        "dau_log_growth_points",
+        "mau_log_component_points",
+        "ratio_log_component_points",
+        "identity_residual_points",
+        "unit",
+        "scope",
+        "source_id",
+        "baseline_source_id",
+        "interpretation"
+      ],
+      "grain": "一个季度和比较类型的增长恒等式",
+      "primary_key": [
+        "period_end",
+        "comparison"
+      ],
+      "unit_period_scope": "100自然对数增长点；非因果贡献",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#公司指标与派生",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/commercial_structure.csv",
+      "bytes": 2617,
+      "sha256": "2dc34a8d91562a880f203448a4729996201c2263473234dad71185cb1147d882",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 8,
+      "columns": [
+        "period_end",
+        "fiscal_year",
+        "fiscal_quarter",
+        "scope",
+        "subscription_bookings_usd_million",
+        "total_bookings_usd_million",
+        "subscription_revenue_usd_million",
+        "total_revenue_usd_million",
+        "subscription_share_of_total_bookings_pct",
+        "subscription_share_of_total_revenue_pct",
+        "subscription_bookings_to_subscription_revenue_ratio",
+        "subscription_bookings_minus_subscription_revenue_usd_million",
+        "source_id",
+        "calculation_label",
+        "interpretation"
+      ],
+      "grain": "一个季度商业结构",
+      "primary_key": [
+        "period_end"
+      ],
+      "unit_period_scope": "USD million、百分比或ratio；非利润/ARPU",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#公司指标与派生",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/stage3_robustness_checks.csv",
+      "bytes": 1258,
+      "sha256": "93c7fb843374836efaf83c757e553d437e48ae61ed8ec865247e81ac2bd79ebf",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 3,
+      "columns": [
+        "check_id",
+        "quantity",
+        "comparison",
+        "point_change",
+        "rounding_low_change",
+        "rounding_high_change",
+        "unit",
+        "point_direction",
+        "direction_survives_disclosure_rounding",
+        "source_ids",
+        "bound_type",
+        "interpretation",
+        "verified_disclosure_corners"
+      ],
+      "grain": "一项舍入方向检查",
+      "primary_key": [
+        "check_id"
+      ],
+      "unit_period_scope": "披露舍入范围；不是置信区间或用户样本",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#公司指标与派生",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/stage3_base_period_bridge.csv",
+      "bytes": 2726,
+      "sha256": "394c9afad6cf3c140f2654e618d53415c8b5b967a07367907c80b0834bb4fbbe",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 3,
+      "columns": [
+        "metric_id",
+        "quantity",
+        "current_window",
+        "prior_window",
+        "current_q1_value",
+        "current_q2_value",
+        "prior_q1_value",
+        "prior_q2_value",
+        "input_unit",
+        "current_qoq_pct",
+        "prior_qoq_pct",
+        "current_qoq_log_points",
+        "prior_qoq_log_points",
+        "base_period_contribution_log_points",
+        "yoy_log_change",
+        "identity_residual_log_points",
+        "decomposition_unit",
+        "source_ids",
+        "source_urls",
+        "evidence_label",
+        "boundary"
+      ],
+      "grain": "一个指标的本期/基期增长桥接",
+      "primary_key": [
+        "metric_id"
+      ],
+      "unit_period_scope": "2026Q1→Q2与2025Q1→Q2；100自然对数增长点",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#公司指标与派生",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "analysis/driver_evidence.csv",
+      "bytes": 2610,
+      "sha256": "9ae994c77bd9b21262fd0b035e8d4116376667d2da97fe16cdae1807fab1828a",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 3,
+      "columns": [
+        "driver_id",
+        "claim",
+        "claim_type",
+        "source_ids",
+        "data_inputs",
+        "calculation",
+        "evidence_strength",
+        "alternative_explanation",
+        "disconfirming_check",
+        "decision_impact",
+        "unresolved_data",
+        "status"
+      ],
+      "grain": "一项诊断主张",
+      "primary_key": [
+        "driver_id"
+      ],
+      "unit_period_scope": "算术、管理层解释和机制候选分别标记",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#账本与契约",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "market/competitor_claims.csv",
+      "bytes": 14556,
+      "sha256": "f070e7a28b46ff9c7ed986277ab9ef844bfa1e4b1dde895136c3a60d38a3db46",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 33,
+      "columns": [
+        "claim_id",
+        "product",
+        "dimension",
+        "hypothesis",
+        "region",
+        "language_level",
+        "tier",
+        "device_or_version",
+        "valid_as_of",
+        "claim_text",
+        "claim_kind",
+        "source_url",
+        "source_locator",
+        "source_date",
+        "accessed_on",
+        "evidence_grade",
+        "comparison_limit",
+        "verification_status"
+      ],
+      "grain": "一条提供方/替代品原子主张",
+      "primary_key": [
+        "claim_id"
+      ],
+      "unit_period_scope": "访问至2026-09-29；版本资格逐项；非效果排名",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#账本与契约",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "market/competitor_evidence_v2.csv",
+      "bytes": 59302,
+      "sha256": "c4d5c77344cbe234b8da1fe7441baf05f27d05ae51b7c8d95a0f059d287f00a4",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 97,
+      "columns": [
+        "claim_id",
+        "product",
+        "dimension",
+        "hypothesis",
+        "region",
+        "language_level",
+        "tier",
+        "device_or_version",
+        "valid_as_of",
+        "feature_scope",
+        "claim_text",
+        "claim_kind",
+        "source_url",
+        "source_locator",
+        "source_date",
+        "accessed_on",
+        "evidence_grade",
+        "independent_unit_id",
+        "quality_status",
+        "comparison_limit",
+        "verification_status"
+      ],
+      "grain": "一条竞品来源定位观察",
+      "primary_key": [
+        "claim_id"
+      ],
+      "unit_period_scope": "97观察/48URL/34可区分体验者；多行不增独立样本",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#账本与契约",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "quant/strategy_comparison.csv",
+      "bytes": 2769,
+      "sha256": "225046f838dca25fd0315b638dad74b9112a42f7e838355f1818a914f8c84c58",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 3,
+      "columns": [
+        "policy_id",
+        "name",
+        "target",
+        "increment",
+        "mechanism",
+        "benefit",
+        "cost",
+        "risk",
+        "kpi",
+        "evidence",
+        "decision",
+        "entry_gate",
+        "stop_rule",
+        "economic_status"
+      ],
+      "grain": "一个策略对象",
+      "primary_key": [
+        "policy_id"
+      ],
+      "unit_period_scope": "P0/P1/P2；非H1/H2/H3的ROI排名",
+      "field_definition_ref": "quant/evidence_assumptions.md",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "quant/stage4_claim_ledger.csv",
+      "bytes": 13715,
+      "sha256": "e98b4bb4e7fd7ab2faf4be650198f7a4469dd364daf16a800e490841f212114e",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 16,
+      "columns": [
+        "claim_id",
+        "claim_type",
+        "evidence_tier",
+        "claim_text",
+        "support_status",
+        "evidence_refs",
+        "source_urls",
+        "evidence_period",
+        "unit",
+        "estimand",
+        "allowed_use",
+        "forbidden_extrapolation",
+        "decision_impact",
+        "linked_gap_ids",
+        "reviewed_on"
+      ],
+      "grain": "一条Stage4主张及禁用外推",
+      "primary_key": [
+        "claim_id"
+      ],
+      "unit_period_scope": "16条包括明确撤销项；不当成16个新研究",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#账本与契约",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "quant/stage4_gap_register.csv",
+      "bytes": 11206,
+      "sha256": "45fa601b06e9a58c5d4a14e24eacf614c1e31a077c2ed0e3b818f8d76ec359c3",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 10,
+      "columns": [
+        "gap_id",
+        "missing_quantity",
+        "claim_ids",
+        "stage3_gap_refs",
+        "evidence_refs",
+        "status",
+        "minimum_data",
+        "external_path",
+        "internal_path",
+        "requires_company_authorization",
+        "blocked_decisions",
+        "allowed_continuation",
+        "next_action",
+        "stop_rule",
+        "reviewed_on"
+      ],
+      "grain": "一个未知量和最低补证",
+      "primary_key": [
+        "gap_id"
+      ],
+      "unit_period_scope": "10缺口；内部、公开未得及尚未产生的效果分开",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#账本与契约",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/stage4_public_observations.csv",
+      "bytes": 10852,
+      "sha256": "b14b40f7149b11c3f2fe88a20b6592a264c77bd295a9afb9812a6e6544f211f9",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 28,
+      "columns": [
+        "observation_id",
+        "question",
+        "evidence_type",
+        "source_id",
+        "source_url",
+        "source_publication_date",
+        "source_modified_date",
+        "coverage_period",
+        "access_date",
+        "observed_region",
+        "observed_device",
+        "account_scope",
+        "target_scope",
+        "source_locator",
+        "field",
+        "value",
+        "unit",
+        "comparability_status",
+        "limitation_code",
+        "billing_period",
+        "sku_id",
+        "individual_or_family",
+        "current_lily_call_quota"
+      ],
+      "grain": "一条官方观察或明确未知/访问结果",
+      "primary_key": [
+        "observation_id"
+      ],
+      "unit_period_scope": "28行；JPY报价不可比/研究计数/推出陈述；非28用户",
+      "field_definition_ref": "quant/evidence_assumptions.md",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/stage4_learning_coverage.csv",
+      "bytes": 867,
+      "sha256": "411f30856b552ba2f728633033476a256b4b318264943322a513ca355ca7d005",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 2,
+      "columns": [
+        "study_id",
+        "arm",
+        "assigned_n",
+        "analysed_n",
+        "not_in_analysis_n",
+        "not_in_analysis_percent",
+        "input_observation_ids",
+        "source_url",
+        "published_on",
+        "accessed_on",
+        "window",
+        "population",
+        "interpretation"
+      ],
+      "grain": "同研究的一条原分组覆盖",
+      "primary_key": [
+        "study_id",
+        "arm"
+      ],
+      "unit_period_scope": "人数/百分比；30天；不是全员ITT或全部失访",
+      "field_definition_ref": "quant/evidence_assumptions.md",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/stage4_economic_readiness.csv",
+      "bytes": 4438,
+      "sha256": "aac57354e615e0b4d15da4054dfe7533b29ae95533c1dd8bb65056f74148b4e5",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 6,
+      "columns": [
+        "policy_id",
+        "original_tier",
+        "effect_scope",
+        "population_id",
+        "period_start",
+        "period_end",
+        "currency",
+        "delta_contribution",
+        "delta_serving_cost",
+        "delta_variable_value",
+        "deployment_n",
+        "economic_status",
+        "missing_inputs",
+        "evidence_status",
+        "decision_boundary"
+      ],
+      "grain": "一政策×原套餐层",
+      "primary_key": [
+        "policy_id",
+        "original_tier"
+      ],
+      "unit_period_scope": "经济均值、差及N为空未知；不是0",
+      "field_definition_ref": "quant/evidence_assumptions.md",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/stage4_policy_readiness.csv",
+      "bytes": 532,
+      "sha256": "28224761bd6153c9fe4d23a0c3e37f49adaba17bf55f407f91c2486bfd0e453b",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 2,
+      "columns": [
+        "policy_id",
+        "actual_increment_status",
+        "total_incremental_value",
+        "currency",
+        "overall_economic_status",
+        "deployment_effect_scope_matched",
+        "condition",
+        "next_action"
+      ],
+      "grain": "一个候选政策的总体就绪",
+      "primary_key": [
+        "policy_id"
+      ],
+      "unit_period_scope": "P1/P2；真实总体值为空未知",
+      "field_definition_ref": "quant/evidence_assumptions.md",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "data/public/stage4_symbolic_sensitivity.csv",
+      "bytes": 1824,
+      "sha256": "a87b28001bf43434d3cd6587b8847b59b2dcbcb065a54fa4976eb03967684e58",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 8,
+      "columns": [
+        "parameter",
+        "expression",
+        "meaning",
+        "condition",
+        "empirical_status"
+      ],
+      "grain": "一条数学或设计关系",
+      "primary_key": [
+        "parameter"
+      ],
+      "unit_period_scope": "8关系；±1为常数；无实证参数域",
+      "field_definition_ref": "quant/evidence_assumptions.md",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "experiments/event_spec.csv",
+      "bytes": 16885,
+      "sha256": "d4a38a8300414d20e7df32d815b50332b29043923bee3af7b65423391ddf2598",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 20,
+      "columns": [
+        "spec_version",
+        "record_name",
+        "grain",
+        "collection_point",
+        "required_fields",
+        "unit",
+        "denominator_and_join",
+        "missing_zero_rule",
+        "purpose",
+        "access_and_privacy",
+        "readiness"
+      ],
+      "grain": "一个拟采集记录合同",
+      "primary_key": [
+        "record_name"
+      ],
+      "unit_period_scope": "20规格行；无实际用户事件",
+      "field_definition_ref": "experiments/test_plan.md",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "reports/figure_lineage.csv",
+      "bytes": 16452,
+      "sha256": "90a3de9449717034bef7859aca6ec5f433a361c3af69a9aa7328b984e79e2144",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied",
+      "rows": 58,
+      "columns": [
+        "figure_id",
+        "input_table",
+        "key",
+        "raw_value",
+        "unit",
+        "display_transform",
+        "source_id",
+        "source_url",
+        "boundary"
+      ],
+      "grain": "一个图中数值的来源",
+      "primary_key": [
+        "figure_id",
+        "key"
+      ],
+      "unit_period_scope": "58图点；显示变换与原单位分列",
+      "field_definition_ref": "data/PACKAGE_FIELD_REFERENCE.md#图与运行规格",
+      "empty_value": "unknown or unavailable/not applicable per field contract; never implicitly zero"
+    },
+    {
+      "path": "docs/DECISION_BRIEF.md",
+      "bytes": 2685,
+      "sha256": "018ac015bda62fee7e192d02c05ec65c8cf8ada2bc1980a70298443ee4916138",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "bytes": 15763,
+      "sha256": "661e5c38f7b9c17e7397abfeba03cf9e76fa4645fc49145f1adbaadd31a64b28",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "docs/DATA_POLICY.md",
+      "bytes": 3697,
+      "sha256": "6d71f86fba3c89610f694b25d782d08c85249010ca0b95948cbba604dadb4d16",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "docs/kpi_tree.md",
+      "bytes": 8989,
+      "sha256": "97e56585e314b73afcff1a6161c22bc1ae8528430e26c6bb215a5d43f03e2b28",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "docs/DELIVERABLES.md",
+      "bytes": 5150,
+      "sha256": "6e98a2c5cd3ebe7781e1a0fffee0c29fe1b6faff4fe70e1dd63f37597191f1db",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "docs/FINAL_DELIVERY.md",
+      "bytes": 10553,
+      "sha256": "908ca24b88d78274d230162bc46cde17e0b192aa74377c647a8eb5d74ba5fb15",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "docs/retrospective.md",
+      "bytes": 9757,
+      "sha256": "1662cd7ff61db7ae11f7a543232b5071c1015a2ad572ecfbd40a776bed80c09d",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "docs/reusable_sop.md",
+      "bytes": 11611,
+      "sha256": "f46e56069d9b4364553c988eec0e93fab1f3ab3e098c8c4f3b399eece8fe6282",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "docs/STAGE_STATUS.md",
+      "bytes": 6254,
+      "sha256": "83ed346570da65c92fcb8ac919be27d736eabadf5112741e4698b71d530fdd8d",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "docs/REPRODUCTION_GUIDE.md",
+      "bytes": 6042,
+      "sha256": "13f8de0d135b603a4b8c92d01ad57abc737133a3e95816dcefd38dab72b466e0",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "docs/NEXT_PHASE_PLAN.md",
+      "bytes": 9356,
+      "sha256": "2424c8da4964a5f8c92825a6684962a4f86545ce70d6afcb590f440962381f03",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "data/PACKAGE_FIELD_REFERENCE.md",
+      "bytes": 7706,
+      "sha256": "2e12ad1daadc997d7ff51124949c7be5d4e118dc7358ab1f5cb751124e8a547b",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "analysis/stage3_analysis.py",
+      "bytes": 37342,
+      "sha256": "6e9c5047c42eccb95d5cab26abe6af581f6aff9c9cc97359ade0e27c2dbafd20",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "analysis/requirements.txt",
+      "bytes": 335,
+      "sha256": "8826711a26dd3fd8f8c543b6116ac16bb33b89958dc510a93bdeb3473ef1cc2b",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "analysis/business_review.ipynb",
+      "bytes": 1074172,
+      "sha256": "d420bfa492d7de8f8fcc87b9841e00036b58dea201612830c33f336688a6a450",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "market/competitor_scenario_review.md",
+      "bytes": 19664,
+      "sha256": "bbe34eb5f9685be887f666226efaa6df02e72e18d39520968ca36f17d3e5daf3",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "market/competitor_evidence_quality_review.md",
+      "bytes": 9167,
+      "sha256": "e651a3a180e502ee10072939681e23b0617123a4826c5a8fd057bb14a26d7740",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "market/voc_quality_review.md",
+      "bytes": 3288,
+      "sha256": "8437b94a6270841643e7a443a3e9b253b58e21fbc7dc3c49ddf1c0fb20d12fa7",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/market_final_review.md",
+      "bytes": 7435,
+      "sha256": "364f8fefef09bfa53045c2b0378f83b22f8ecc312e823c03d5620d4a6a49be7f",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/decision_card.md",
+      "bytes": 3903,
+      "sha256": "bff174c3960cd7cb9ecca692059aecfb8c823e8cbd5be714992d1647dd84a39b",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/monitoring_design.md",
+      "bytes": 16058,
+      "sha256": "c1ba4260c201859e0745f21819e0b7ce00da96d5204677ba5b073a45b289570f",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/executive_decision_book.docx",
+      "bytes": 281260,
+      "sha256": "0242f719801c5f94f1d5b37107ca8e2457b01f2f9017ebc5ae6e0dc550be428d",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/executive_decision_book.pdf",
+      "bytes": 970210,
+      "sha256": "d02fb6985b70b5d8594252bff314d7371e085750186b9a6ff8f10836f0b42d29",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/strategy_dashboard.xlsx",
+      "bytes": 17243,
+      "sha256": "0ad62f1e304191f2de2890d126607f745928051ee7dede5b8d2f46796c0a8e67",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/strategy_dashboard.pdf",
+      "bytes": 479214,
+      "sha256": "88fc04467ee4ae401801235659e821131fffc634118326f7007b386e61ef6fcb",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "experiments/test_plan.md",
+      "bytes": 23999,
+      "sha256": "5f340490de12f0114cd3d2bbd7a10b158be5479c510f78b97b2c64d4fdd13b91",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "experiments/test_plan.docx",
+      "bytes": 95071,
+      "sha256": "bf15ae2f9e58b70ac5982e147f18562889358974fa9b85967bb8b182b93db561",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "experiments/test_plan.pdf",
+      "bytes": 696381,
+      "sha256": "c2801f2d638789df50122df09686afbbb18058389b84eaf139e9e49ef437ea85",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "experiments/stage5_final_validation.json",
+      "bytes": 2127,
+      "sha256": "96c2d18e2e03882cbf2bb436c5008686d15cd16b040b9b188cc1dd369e86d41e",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "quant/stage4_final_delivery.md",
+      "bytes": 15959,
+      "sha256": "b5eca6884a6800f84a3f27e7e362341600d71a8a64225a59009ad5c207576581",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "quant/stage4_public_evidence_v2.md",
+      "bytes": 9851,
+      "sha256": "c0c11c24d4951f972bfb38eaf04a399ee1f03beec2bb67e044c216d07342484b",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "quant/evidence_assumptions.md",
+      "bytes": 5514,
+      "sha256": "88bd94d5954cdd87ca9f90ddfe0eabc80396dc10b105f5604f3ef7b507e49428",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "quant/evidence_inputs.json",
+      "bytes": 4367,
+      "sha256": "7a45d139fb9f5b254266a80ea350ae01accf8f0a1a29a8b7ec7f82c2fbf6495c",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "quant/evidence_model.py",
+      "bytes": 14055,
+      "sha256": "4c2e628e74d8d9d3f55a695978cedc0c7425f9521f8263f9a10e31efb40a2a7d",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "quant/evidence_model.ipynb",
+      "bytes": 7112,
+      "sha256": "6c784bfdcd428212030418a0fa39808462b5e30ec1c3c777c1e8e67f7d0502a0",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "quant/stage4_final_validation.json",
+      "bytes": 12848,
+      "sha256": "4f287b184ceca2f5665826d52e3a5416c6a34205c193a9f0ff4605d99478e2d0",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/run_stage3.py",
+      "bytes": 19710,
+      "sha256": "c96b028c46dfdb6a39f8d1c88cced03ae8094b6aa352fe3e33cceaff878f9394",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/run_stage4_final.py",
+      "bytes": 4137,
+      "sha256": "7e7bf7f0ae7caeefe736819fb38f16db3889dd1857338f5baf748d88f5d7d47d",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/verify_stage4_final.py",
+      "bytes": 29599,
+      "sha256": "58c40bc8f408fee93ba00325a37a3fb17d609873aae711841fd8cd2606594deb",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/rebuild_package_tables.py",
+      "bytes": 3648,
+      "sha256": "e7594e52e67b5b32624be5273cd208e24d6bff4a333cf48fa3347724afa9f096",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/build_final_documents.py",
+      "bytes": 36964,
+      "sha256": "80909e893219c19f13357fdec0ae4aea26340215e0f63bc1bd272f3a48d84fbf",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/export_final_documents.ps1",
+      "bytes": 1571,
+      "sha256": "711370cbd870d75fbd736d3aa977ac2acee8ba83005269962e76f43260bb2fcd",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/render_final_pdfs.py",
+      "bytes": 2144,
+      "sha256": "344a64792a7afdd4524afefea80f75cf1ad084e3a2e770db59e167056f5e82eb",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/build_final_data_package.py",
+      "bytes": 20396,
+      "sha256": "96479144abc37f9e9433f1cad29a3078a4c1e0eff7493819e46a246a686de27c",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/build_monitoring_dashboard.mjs",
+      "bytes": 22557,
+      "sha256": "b654519fec3cece65c8967b7c354cecb9a2b1905fbdbd37d3f6f5ddffbb71123",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/build_monitoring_dashboard.py",
+      "bytes": 10598,
+      "sha256": "505f77edb685364fe4bc3b284f9bb6e6036f5dcbac012e164426a3a24111bc9d",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "scripts/build_monitoring_dashboard.ps1",
+      "bytes": 10116,
+      "sha256": "d4adb9aaea18f8ae8bcac9a542bf1bbcd554ba1b015e2c10fad2c04bacf2c277",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/generated/monitoring_build/monitoring_artifact_qa.json",
+      "bytes": 8117,
+      "sha256": "5b52a85efb202cdb43c621877a164dcf2881160e309394002f5b5fc97ddc1596",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/generated/monitoring_build/monitoring_native_qa.json",
+      "bytes": 6099,
+      "sha256": "2eab3d9eea66d2f6964c5ce67c3239c00197f521f7fbbd1a531a7cc97812a73b",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/generated/monitoring_build/monitoring_reimport_qa.json",
+      "bytes": 201,
+      "sha256": "c2aa4e5094cbb9c86d1a489be3d1a6355fd7b86393f2f7701b6691e274238cd4",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/generated/monitoring_build/monitoring_packaging_qa.json",
+      "bytes": 269,
+      "sha256": "fa554d0e4b8e36bb6d3f752c7f78736f0d92e19b9498274c36736ba292d457a9",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/generated/monitoring_build/monitoring_pdf_qa.json",
+      "bytes": 1361,
+      "sha256": "c1ffaab2c5f7e0cf4c20a30031118e2a037d2a9dad2b9bcfb6dea7fe8cec4983",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    },
+    {
+      "path": "reports/generated/monitoring_build/monitoring_pdf_render_qa.json",
+      "bytes": 96,
+      "sha256": "6938e1e71d70e0e84e634e9f72e16d25db6f30ed9b7a6e5547d2ccb9b8109058",
+      "sharing": "Own analysis/code/specification or minimal extracted factual data and own paraphrase; source material retains rights; no full third-party text license implied"
+    }
+  ],
+  "exclusions": [
+    "opportunity_model.ipynb",
+    "opportunity_model.py",
+    "parameter_register.csv",
+    "scenario_inputs.json",
+    "scenario_results.csv",
+    "stage3_learning_selection_sensitivity.csv",
+    "stage4_billing_paths.csv",
+    "stage4_break_even.csv",
+    "stage4_sensitivity.csv"
+  ],
+  "reproduction_boundary": "Starts from supplied public CSV; original web collection/manual coding not automatically reproduced; private 298-row intake omitted; its counts remain received aggregate evidence",
+  "standard_jupyter": "not validated; direct route only",
+  "source_authentication": "Hashes establish bytes, not source authenticity or causality"
+}

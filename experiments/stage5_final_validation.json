@@ -1,0 +1,44 @@
+{
+  "version": "stage5-v1.0",
+  "reviewed_on": "2026-10-03",
+  "status": "degraded_pass_conditional_design_and_artifacts",
+  "trial_execution": "not_ready_not_performed",
+  "primary": "all-randomized baseline-adjusted delayed parallel-task speaking score",
+  "actual_checks": {
+    "independent_design_review": "passed after natural-overlap correction; no product-effect validation",
+    "event_contracts": {
+      "rows": 20,
+      "fields": 11,
+      "unique_record_names": true,
+      "observations": "none"
+    },
+    "native_word_pdf_export": {
+      "engine": "Microsoft Word COM 16.0",
+      "pages": 8,
+      "status": "passed"
+    },
+    "visual_qa": {
+      "all_current_pages_inspected": 8,
+      "status": "passed",
+      "unchanged_first_six_pages": "image hashes matched earlier inspected pages"
+    },
+    "canonical_renderer": "failed LibreOffice not available; native Word was used instead",
+    "builder_final_revision": "Closeout book-only wording strengthened complete policy budget and Scale boundary; experiment source/DOCX/PDF and other receipt hashes unchanged"
+  },
+  "not_passed": [
+    "actual entitlement and incremental access",
+    "authorization and lawful delayed control",
+    "score/task calibration, mature windows, variance/MDE/N",
+    "actual learning/economic effect and interference",
+    "Scale"
+  ],
+  "sha256": {
+    "experiments/test_plan.md": "5f340490de12f0114cd3d2bbd7a10b158be5479c510f78b97b2c64d4fdd13b91",
+    "experiments/test_plan.docx": "bf15ae2f9e58b70ac5982e147f18562889358974fa9b85967bb8b182b93db561",
+    "experiments/test_plan.pdf": "c2801f2d638789df50122df09686afbbb18058389b84eaf139e9e49ef437ea85",
+    "experiments/event_spec.csv": "d4a38a8300414d20e7df32d815b50332b29043923bee3af7b65423391ddf2598",
+    "reports/decision_card.md": "bff174c3960cd7cb9ecca692059aecfb8c823e8cbd5be714992d1647dd84a39b",
+    "scripts/build_final_documents.py": "80909e893219c19f13357fdec0ae4aea26340215e0f63bc1bd272f3a48d84fbf",
+    "scripts/export_final_documents.ps1": "711370cbd870d75fbd736d3aa977ac2acee8ba83005269962e76f43260bb2fcd"
+  }
+}

@@ -1,0 +1,26 @@
+name: Validate public analysis
+
+on:
+  push:
+    branches: [main, 'codex/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproducible-analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recompute public tables and report figure points
+        run: python -B scripts/rebuild_package_tables.py
+      - name: Check current evidence-constrained model
+        run: python -B scripts/run_stage4_final.py --check-only
+      - name: Independently check arithmetic and evidence boundaries
+        run: python -B scripts/verify_stage4_final.py --check-only

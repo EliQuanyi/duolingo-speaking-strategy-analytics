@@ -1,0 +1,33 @@
+period_end,metric_id,primary_value,comparison_value,absolute_difference_million,primary_precision_million,comparison_precision_million,tolerance_million,consistent_with_rounding,primary_source_id,comparison_source_id,comparison_source_locator
+2024-09-30,M001,37.2,37.2,0.0,0.1,0.1,0.1,True,S004,S008,摘要第7页DAU行，web L101
+2024-09-30,M002,113.1,113.1,0.0,0.1,0.1,0.1,True,S004,S008,摘要第7页MAU行；定义第12页，web L100、220
+2024-09-30,M004,8.6,8.6,0.0,0.1,0.1,0.1,True,S004,S008,摘要第7页Paid subscribers期末行，web L102
+2024-09-30,M005,176.3,176.309,0.00899999999998613,0.1,0.001,0.0505,True,S004,S017,MD&A指标表第27页，三个月2024列，web L891
+2024-09-30,M006,211.5,211.456,0.04400000000001114,0.1,0.001,0.0505,True,S004,S017,MD&A指标表第27页，三个月2024列，web L892
+2024-09-30,M007,192.594,192.594,0.0,0.001,0.001,0.001,True,S004,S008,利润表第16页，三个月2024列收入行，web L293
+2024-09-30,M009,157.6,157.617,0.016999999999995907,0.1,0.001,0.0505,True,S004,S017,MD&A收入分项第36页，三个月2024列Subscription行，web L1147
+2024-12-31,M001,40.5,40.5,0.0,0.1,0.1,0.1,True,S005,S009,摘要第8页DAU行，web L126
+2024-12-31,M002,116.7,116.7,0.0,0.1,0.1,0.1,True,S005,S009,摘要第8页MAU行；定义第13页，web L125、240
+2024-12-31,M004,9.5,9.5,0.0,0.1,0.1,0.1,True,S005,S009,摘要第8页Paid subscribers期末行，web L127
+2024-12-31,M005,236.5,236.5,0.0,0.1,0.1,0.1,True,S005,S009,摘要第8页Subscription bookings行，web L132
+2024-12-31,M006,271.6,271.6,0.0,0.1,0.1,0.1,True,S005,S009,摘要第8页Total bookings行，web L133
+2024-12-31,M007,209.55,209.55,0.0,0.001,0.001,0.001,True,S005,S009,附录利润调节表第20页收入行，Q4 2024列，web L395
+2024-12-31,M009,174.3,174.317,0.016999999999995907,0.1,0.002,0.051000000000000004,True,S005,S018|S017,Note 5收入分项第100页年度Subscription行，web L2596；S017第36页九个月Subscription行，web L1147
+2025-03-31,M001,46.6,46.6,0.0,0.1,0.1,0.1,True,S006,S010,摘要第8页DAU行，web L121；定义第13页L230
+2025-03-31,M002,130.2,130.2,0.0,0.1,0.1,0.1,True,S006,S016,MD&A第22–23页MAU定义及数值，web L766–773
+2025-03-31,M004,10.3,10.3,0.0,0.1,0.1,0.1,True,S006,S010,摘要第8页Paid subscribers期末行，web L122
+2025-03-31,M005,232.2,232.2,0.0,0.1,0.1,0.1,True,S006,S010,摘要第8页Subscription bookings行，web L125
+2025-03-31,M006,271.6,271.6,0.0,0.1,0.1,0.1,True,S006,S010,摘要第8页Total bookings行，web L126
+2025-03-31,M007,230.743,230.743,0.0,0.001,0.001,0.001,True,S006,S010,利润表第17页，三个月2025列收入行，web L324
+2025-03-31,M009,191,190.987,0.01300000000000523,0.1,0.001,0.0505,True,S006,S010,收入分项附录第20页，Q1 2025列Subscription行，web L381
+2025-06-30,M001,47.7,47.7,0.0,0.1,0.1,0.1,True,S007,S002,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column
+2025-06-30,M002,128.3,128.3,0.0,0.1,0.1,0.1,True,S007,S002,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column
+2025-06-30,M004,10.9,10.9,0.0,0.1,0.1,0.1,True,S007,S002,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column
+2025-06-30,M005,227.3,227.259,0.04100000000002524,0.1,0.001,0.0505,True,S007,S002,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column
+2025-06-30,M006,268,268.02,0.01999999999998181,0.1,0.001,0.0505,True,S007,S002,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column
+2025-06-30,M007,252.265,252.265,0.0,0.001,0.001,0.001,True,S007,S002,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column
+2025-06-30,M009,210.7,210.678,0.02199999999999136,0.1,0.001,0.0505,True,S007,S002,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column
+2026-03-31,M005,268.1,268.065,0.03500000000002501,0.1,0.001,0.0505,True,S010,S016,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column
+2026-03-31,M006,308.5,308.484,0.016000000000019554,0.1,0.001,0.0505,True,S010,S016,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column
+2026-03-31,M007,291.967,291.967,0.0,0.001,0.001,0.001,True,S010,S016,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column
+2026-03-31,M009,250.908,250.908,0.0,0.001,0.001,0.001,True,S010,S016,MD&A key operating metrics / Note 4 revenue; comparison or quarterly column

@@ -1,0 +1,10 @@
+{
+  "operation": "OOXML print metadata and hyperlinks only",
+  "values_formulas_preserved": true,
+  "print_areas": [
+    "B2:I40",
+    "B2:I30"
+  ],
+  "source_hyperlinks": 8,
+  "xlsx_sha256": "0ad62f1e304191f2de2890d126607f745928051ee7dede5b8d2f46796c0a8e67"
+}

@@ -1,0 +1,154 @@
+{
+  "version": "closeout-v1.1",
+  "reviewed_on": "2026-10-03",
+  "product_evidence_cutoff": "2026-10-02",
+  "artifact_gate": "passed_with_explicit_technical_and_evidence_limits",
+  "business_effect_gate": "not_passed_not_ready_not_executed",
+  "actual_checks": {
+    "required_artifacts_present": 36,
+    "pdf_text_boundary_regressions": {
+      "status": "passed",
+      "cases": 7,
+      "body_digits_and_footer_like_body_text_retained": true
+    },
+    "book": {
+      "pages": 11,
+      "word_paragraphs_checked": 177,
+      "paragraphs_present_in_pdf": 177,
+      "paragraph_text_coverage": 1.0,
+      "word_illustrations": 4,
+      "page_footers_ignored": 11,
+      "body_text_rule": "Whitespace ignored; only complete first/last extracted footer line matching each page number removed; body text retained",
+      "engine": "Actual Microsoft Word COM 16.0 export",
+      "limitation": "Text check plus actual export and visual review; not a pixel-equivalence certificate"
+    },
+    "experiment": {
+      "pages": 8,
+      "word_paragraphs_checked": 109,
+      "paragraphs_present_in_pdf": 109,
+      "paragraph_text_coverage": 1.0,
+      "word_illustrations": 3,
+      "page_footers_ignored": 8,
+      "body_text_rule": "Whitespace ignored; only complete first/last extracted footer line matching each page number removed; body text retained",
+      "engine": "Actual Microsoft Word COM 16.0 export",
+      "limitation": "Text check plus actual export and visual review; not a pixel-equivalence certificate"
+    },
+    "current_visual_qa": {
+      "book": 11,
+      "experiment": 8,
+      "monitor": 2,
+      "status": "Book pages 7 and 9 visually reinspected after closeout edits; other 9 page render hashes unchanged from inspected version; experiment and monitor unchanged"
+    },
+    "stage4_unchanged_receipt": {
+      "matched_files": 20,
+      "not_source_authentication": true
+    },
+    "stage5_receipt": {
+      "matched_files": 7,
+      "not_source_authentication": true
+    },
+    "event_contracts": {
+      "rows": 20,
+      "fields": 11,
+      "actual_events": 0
+    },
+    "monitoring": {
+      "sheets": 2,
+      "pages": 2,
+      "editable_charts": 1,
+      "blank_planning_inputs_checked": 16,
+      "source_dau_rows_checked": 8,
+      "native_state_and_color_cases": 25,
+      "native_chart_edit_and_restore": true,
+      "native_save_passed": false,
+      "native_pdf_passed": false,
+      "pdf_mode": "raster snapshots re-rendered from final XLSX; not searchable body text",
+      "visual_review": "Both current PDF pages inspected by agent and root"
+    },
+    "frozen_package": {
+      "status": "passed",
+      "archive": "reports/generated/duolingo_analysis_data_v1.zip",
+      "version": "duolingo-analysis-v1.1-closeout-stage4-v2-stage5-v1",
+      "files": 81,
+      "csv_tables": 25,
+      "bytes": 3358739,
+      "source_allowlist_and_contracts": "passed",
+      "primary_reader_local_links_checked": 43,
+      "isolated_csv_reproduction": {
+        "status": "passed",
+        "mode": "check_only",
+        "company_input_qa": "passed",
+        "derived_tables": 7,
+        "bridge_rows_recomputed": 3,
+        "figure_points_checked": 58,
+        "legacy_D_reads_or_exports": 0
+      },
+      "isolated_stage4_independent_checks": {
+        "unknown_economic_parameters_and_outputs": "passed",
+        "independent_symbolic_relations": "passed",
+        "independent_registered_learning_counts": "passed",
+        "independent_arithmetic_fixtures": "passed",
+        "invalid_inputs_and_basis_gates": "passed",
+        "final_generation_isolated_from_D": "passed",
+        "saved_actual_direct_Notebook_outputs": "passed",
+        "read_only_artifact_hashes": "passed"
+      },
+      "private_or_retired_D_files": 0,
+      "sha256": "ae6b4904f5a30e550db38cb64f677ce3dacf18f6d299ffbd8a8954955d809c8e"
+    },
+    "package_allowlist_boundary_regressions": {
+      "status": "passed",
+      "invalid_cases_rejected": 7,
+      "valid_current_manifest_accepted": true,
+      "scope": "Software boundary cases only; no artificial business data exported"
+    },
+    "independent_review": "Experiment/market/quant/packaging issues corrected; limited human reasoning reviews, not full independent source authentication"
+  },
+  "not_passed": [
+    "natural-use all-assigned learning/business effects and actual current access",
+    "causal company Driver attribution, genuine cost/contribution/Max spillover/N/F",
+    "real policy ROI/ranking, numeric forecast, experimental MDE/N and Scale",
+    "original full learning PDF and exhaustive original-source audit",
+    "standard Jupyter kernel; Excel native Save/PDF export"
+  ],
+  "new_dependencies_installed": false,
+  "sha256": {
+    "reports/executive_decision_book.docx": "0242f719801c5f94f1d5b37107ca8e2457b01f2f9017ebc5ae6e0dc550be428d",
+    "reports/executive_decision_book.pdf": "d02fb6985b70b5d8594252bff314d7371e085750186b9a6ff8f10836f0b42d29",
+    "reports/strategy_dashboard.xlsx": "0ad62f1e304191f2de2890d126607f745928051ee7dede5b8d2f46796c0a8e67",
+    "reports/strategy_dashboard.pdf": "88fc04467ee4ae401801235659e821131fffc634118326f7007b386e61ef6fcb",
+    "experiments/test_plan.docx": "bf15ae2f9e58b70ac5982e147f18562889358974fa9b85967bb8b182b93db561",
+    "experiments/test_plan.pdf": "c2801f2d638789df50122df09686afbbb18058389b84eaf139e9e49ef437ea85",
+    "experiments/event_spec.csv": "d4a38a8300414d20e7df32d815b50332b29043923bee3af7b65423391ddf2598",
+    "reports/decision_card.md": "bff174c3960cd7cb9ecca692059aecfb8c823e8cbd5be714992d1647dd84a39b",
+    "reports/figure_lineage.csv": "90a3de9449717034bef7859aca6ec5f433a361c3af69a9aa7328b984e79e2144",
+    "reports/market_final_review.md": "364f8fefef09bfa53045c2b0378f83b22f8ecc312e823c03d5620d4a6a49be7f",
+    "reports/monitoring_design.md": "c1ba4260c201859e0745f21819e0b7ce00da96d5204677ba5b073a45b289570f",
+    "quant/stage4_final_delivery.md": "b5eca6884a6800f84a3f27e7e362341600d71a8a64225a59009ad5c207576581",
+    "quant/evidence_model.ipynb": "6c784bfdcd428212030418a0fa39808462b5e30ec1c3c777c1e8e67f7d0502a0",
+    "quant/stage4_final_validation.json": "4f287b184ceca2f5665826d52e3a5416c6a34205c193a9f0ff4605d99478e2d0",
+    "experiments/stage5_final_validation.json": "96c2d18e2e03882cbf2bb436c5008686d15cd16b040b9b188cc1dd369e86d41e",
+    "docs/FINAL_DELIVERY.md": "908ca24b88d78274d230162bc46cde17e0b192aa74377c647a8eb5d74ba5fb15",
+    "docs/retrospective.md": "1662cd7ff61db7ae11f7a543232b5071c1015a2ad572ecfbd40a776bed80c09d",
+    "docs/reusable_sop.md": "f46e56069d9b4364553c988eec0e93fab1f3ab3e098c8c4f3b399eece8fe6282",
+    "docs/STAGE_STATUS.md": "83ed346570da65c92fcb8ac919be27d736eabadf5112741e4698b71d530fdd8d",
+    "docs/REPRODUCTION_GUIDE.md": "13f8de0d135b603a4b8c92d01ad57abc737133a3e95816dcefd38dab72b466e0",
+    "docs/NEXT_PHASE_PLAN.md": "2424c8da4964a5f8c92825a6684962a4f86545ce70d6afcb590f440962381f03",
+    "docs/PORTFOLIO_CASE_STUDY.md": "1599c93859b856d3371746b75a6a2fb1978298964fc722103d7a977a6b24b63b",
+    "docs/PUBLICATION.md": "4b2237059d5879aa199a348db7783e47afbea0cb481261e17fe5e0477150eb40",
+    ".gitattributes": "77eb3a3064c88e6a51006084b9ad62a7a020a9b9c29657c08002d0fa7bea63cd",
+    ".github/workflows/validate-public-analysis.yml": "f0a1f288b1c36a39c2ac2f6b2984225805be2c019531db9bf98d77d0fbdb302c",
+    "docs/REQUIREMENTS_MATRIX.md": "9a160ba377784de7c11885a6e90f0f487a765e28a8dfa5b54b717db3337a5a16",
+    "README.md": "dbf4194ef551f8f215e05ebde5c774abc8d4b52d2187b9b94b69c3533a70c565",
+    "data/PACKAGE_FIELD_REFERENCE.md": "2e12ad1daadc997d7ff51124949c7be5d4e118dc7358ab1f5cb751124e8a547b",
+    "data/final_package_manifest.json": "fdc2bc4b60f42e4f2d14df5943bd5701c9543ba21f5774ed693cc66d72011eb9",
+    "data/FINAL_PACKAGE_MANIFEST.md": "52caef7984536344760a05c536e6559612d27709d49e48752a1ad3d252534d87",
+    "reports/generated/duolingo_analysis_data_v1.zip": "ae6b4904f5a30e550db38cb64f677ce3dacf18f6d299ffbd8a8954955d809c8e",
+    "scripts/build_final_documents.py": "80909e893219c19f13357fdec0ae4aea26340215e0f63bc1bd272f3a48d84fbf",
+    "scripts/export_final_documents.ps1": "711370cbd870d75fbd736d3aa977ac2acee8ba83005269962e76f43260bb2fcd",
+    "scripts/build_final_data_package.py": "96479144abc37f9e9433f1cad29a3078a4c1e0eff7493819e46a246a686de27c",
+    "scripts/rebuild_package_tables.py": "e7594e52e67b5b32624be5273cd208e24d6bff4a333cf48fa3347724afa9f096",
+    "scripts/verify_final_delivery.py": "eb0d5b03f84595d0b60587f846425b064e0c717ff1858fb6ea2e251e962dc42a"
+  },
+  "integrity_boundary": "Actual byte/structural/numeric/package checks; does not authenticate external sources or establish product causality"
+}
