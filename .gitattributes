@@ -1,0 +1,9 @@
+# Preserve reviewed artifact bytes across Windows and Linux checkouts.
+# Hash receipts cover CSV, JSON, notebooks, documents and their source files.
+# This changes Git conversion rules; it does not rewrite working files.
+* -text whitespace=trailing-space,space-before-tab,cr-at-eol
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.png binary
+*.zip binary

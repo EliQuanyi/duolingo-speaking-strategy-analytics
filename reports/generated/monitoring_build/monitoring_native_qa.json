@@ -1,0 +1,205 @@
+{
+  "engine": "Microsoft Excel COM",
+  "version": "16.0",
+  "worksheet_count": 2,
+  "native_chart_count": 1,
+  "native_boundary_tests": [
+    {
+      "name": "saved_blank_inputs",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "all_prerequisites_zero_baseline_zero_approved_budget",
+      "expected": "绿色：可提交受限验证审批",
+      "actual": "绿色：可提交受限验证审批",
+      "color": 15200739.0,
+      "expected_color": 15200739
+    },
+    {
+      "name": "missing_D8",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_H8",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_D9",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_H9",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_D10",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_H10",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_D11",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_H11",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_D12",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_H12",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_D13",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_H13",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_D14",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_H14",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_D15",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "missing_H15",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "whitespace_currency",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    },
+    {
+      "name": "numeric_currency",
+      "expected": "红色：输入口径无效",
+      "actual": "红色：输入口径无效",
+      "color": 14606843.0,
+      "expected_color": 14606843
+    },
+    {
+      "name": "zero_mde",
+      "expected": "红色：输入口径无效",
+      "actual": "红色：输入口径无效",
+      "color": 14606843.0,
+      "expected_color": 14606843
+    },
+    {
+      "name": "negative_cap",
+      "expected": "红色：输入口径无效",
+      "actual": "红色：输入口径无效",
+      "color": 14606843.0,
+      "expected_color": 14606843
+    },
+    {
+      "name": "zero_cap_preserved",
+      "expected": "绿色：可提交受限验证审批",
+      "actual": "绿色：可提交受限验证审批",
+      "color": 15200739.0,
+      "expected_color": 15200739
+    },
+    {
+      "name": "known_permission_failure_with_missing_baseline",
+      "expected": "红色：停止当前方案",
+      "actual": "红色：停止当前方案",
+      "color": 14606843.0,
+      "expected_color": 14606843
+    },
+    {
+      "name": "restore_delivered_unknowns",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪",
+      "color": 13562111.0,
+      "expected_color": 13562111
+    }
+  ],
+  "chart_source_formula": "=SERIES(\"DAU（百万）\",证据与就绪!$B$24:$B$31,证据与就绪!$C$24:$C$31,1)",
+  "chart_edit_value_observed": 38.2,
+  "chart_edit_restored": true,
+  "all_planning_inputs_restored_blank": true,
+  "final_status": "黄色：未就绪",
+  "native_save_succeeded": false,
+  "native_pdf_succeeded": false,
+  "native_errors": [
+    "Save: 命令不可用。因为使用该应用程序的许可已经过期。",
+    "ExportAsFixedFormat: 0x800A03EC"
+  ],
+  "pdf_export": "Attempted Workbook.ExportAsFixedFormat from artifact-authored XLSX; see success flags",
+  "print_areas": [
+    "B2:I40",
+    "B2:I30"
+  ],
+  "format": "A4 landscape, one page per worksheet",
+  "limitations": [
+    "No live data, experiment execution or automatic refresh.",
+    "Human review must verify source authenticity, contracts, eligibility and budget.",
+    "Native conditional formatting and chart recalculation checked; KPI result states are design rules, not measured results."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "pdf_pages": 2,
+  "pdf_format": "A4 landscape",
+  "pdf_creation_engine": "ReportLab wrapping actual final-XLSX artifact-tool sheet renders",
+  "same_view_source": "Final saved XLSX reimported by artifact-tool; one full render per sheet",
+  "images": [
+    {
+      "sheet": "证据与就绪",
+      "render_path": "reports\\generated\\monitoring_build\\monitoring_evidence.png",
+      "pixel_size": [
+        1362,
+        1236
+      ],
+      "sha256": "c9236c3bc340026b2e0cc14b6ed2e0b00b833d8cf18232e4a5d0994537f833ec"
+    },
+    {
+      "sheet": "未来KPI",
+      "render_path": "reports\\generated\\monitoring_build\\monitoring_kpi.png",
+      "pixel_size": [
+        1362,
+        1271
+      ],
+      "sha256": "252f296597a6b108a0f165c635e80877c6a294cee457a6e8af63bb4ecaf46705"
+    }
+  ],
+  "native_editable_chart_count": 1,
+  "authoritative_dau_reconciled": 8,
+  "all_16_planning_inputs_blank": true,
+  "pdf_source_annotations": 8,
+  "xlsx_sha256": "0ad62f1e304191f2de2890d126607f745928051ee7dede5b8d2f46796c0a8e67",
+  "pdf_sha256": "88fc04467ee4ae401801235659e821131fffc634118326f7007b386e61ef6fcb",
+  "limitations": [
+    "PDF is a raster snapshot; text/chart edits are performed in XLSX, not PDF.",
+    "Excel native Save and PDF export were refused by the expired Office license; not claimed as successful."
+  ]
+}

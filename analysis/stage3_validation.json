@@ -1,0 +1,801 @@
+{
+  "analysis_window": "2024 Q3–2026 Q2",
+  "baseline_window": "2023 Q3–2024 Q2 (comparison inputs only)",
+  "checks": {
+    "annual_minus_ytd_lineage": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "baselines_coverage": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "baselines_primary_key": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "comparison_baseline_coverage": {
+      "evaluations": 128,
+      "failures": [],
+      "status": "passed"
+    },
+    "consistent_global_scope": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "dau_mau_ratio_identity": {
+      "evaluations": 8,
+      "failures": [],
+      "status": "passed"
+    },
+    "dau_not_above_mau": {
+      "evaluations": 12,
+      "failures": [],
+      "status": "passed"
+    },
+    "derived_input_precision_conversion": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "derived_ratio_precision": {
+      "evaluations": 8,
+      "failures": [],
+      "status": "passed"
+    },
+    "dictionary_metric_coverage": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "disclosure_access_dates": {
+      "evaluations": 92,
+      "failures": [],
+      "status": "passed"
+    },
+    "finite_positive_values": {
+      "evaluations": 92,
+      "failures": [],
+      "status": "passed"
+    },
+    "log_decomposition_identity": {
+      "evaluations": 16,
+      "failures": [],
+      "max_absolute_residual_log_growth_points": 2.3314683517128287E-14,
+      "status": "passed"
+    },
+    "metric_dictionary_unique_id": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "metric_fk": {
+      "evaluations": 92,
+      "failures": [],
+      "status": "passed"
+    },
+    "numeric_and_date_parse": {
+      "evaluations": 92,
+      "failures": [],
+      "status": "passed"
+    },
+    "official_yoy_provenance": {
+      "evaluations": 55,
+      "failures": [],
+      "status": "passed"
+    },
+    "official_yoy_rounding_reconciliation": {
+      "evaluations": 55,
+      "failures": [],
+      "status": "passed"
+    },
+    "original_value_conversion": {
+      "evaluations": 84,
+      "failures": [],
+      "status": "passed"
+    },
+    "quarter_boundaries": {
+      "evaluations": 92,
+      "failures": [],
+      "status": "passed"
+    },
+    "quarterly_coverage": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "quarterly_primary_key": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "required_values": {
+      "evaluations": 92,
+      "failures": [],
+      "status": "passed"
+    },
+    "source_fk": {
+      "evaluations": 92,
+      "failures": [],
+      "status": "passed"
+    },
+    "source_precision_unit_conversion": {
+      "evaluations": 83,
+      "failures": [],
+      "status": "passed"
+    },
+    "source_register_unique_id": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "source_url_matches_register": {
+      "evaluations": 92,
+      "failures": [],
+      "status": "passed"
+    },
+    "subscription_component_not_above_total": {
+      "evaluations": 24,
+      "failures": [],
+      "status": "passed"
+    },
+    "timeline_date_precision": {
+      "evaluations": 16,
+      "failures": [],
+      "status": "passed"
+    },
+    "timeline_required_values": {
+      "evaluations": 16,
+      "failures": [],
+      "status": "passed"
+    },
+    "timeline_source_fk": {
+      "evaluations": 16,
+      "failures": [],
+      "status": "passed"
+    },
+    "timeline_unique_event_id": {
+      "evaluations": 1,
+      "failures": [],
+      "status": "passed"
+    },
+    "unit_and_aggregation": {
+      "evaluations": 92,
+      "failures": [],
+      "status": "passed"
+    }
+  },
+  "inputs": {
+    "baselines": {
+      "path": "data/public/company_comparison_baselines.csv",
+      "rows": 28,
+      "sha256": "565669c38a08de08523e60fceee68061a7fd4a14ef9450c29c7878b2e5b3bbd3"
+    },
+    "dictionary": {
+      "path": "data/metric_dictionary.csv",
+      "rows": 14,
+      "sha256": "f4fc8657bbfa2684587b7af4674bad784545181e9b0df7044e98e1940ecbed38"
+    },
+    "quarterly": {
+      "path": "data/public/company_quarterly_metrics.csv",
+      "rows": 64,
+      "sha256": "937a01ab139393fb92b7826d3a89d800add7d596a58072d5f684062ff6aba2e9"
+    },
+    "sources": {
+      "path": "data/source_register.csv",
+      "rows": 18,
+      "sha256": "6d7ca12b918bf2f0c109f58d0b19ac82833c2cfa336140d27f6a419d56c51f38"
+    },
+    "timeline": {
+      "path": "data/public/product_timeline.csv",
+      "rows": 16,
+      "sha256": "9b660a4183febadd9d54e331ed00c5d96dc4971d076588635d9120958617d665"
+    }
+  },
+  "limitations": [
+    "Local consistency checks do not independently verify original source authenticity.",
+    "Company metrics cannot identify Video Call treatment effects.",
+    "DAU/MAU is a ratio of quarterly averages, not cohort retention.",
+    "Paid subscriptions are quarter-end paying accounts, not conversion.",
+    "Bookings and revenue are different quarterly flows; their gap is not deferred revenue.",
+    "Eight main quarters do not support robust causal or seasonal modeling.",
+    "Input rounding intervals are not statistical confidence intervals.",
+    "Q4 annual-minus-YTD rounding bounds propagate both source legs, separately from the derived displayed value's last digit."
+  ],
+  "notebook_execution": {
+    "executor": "fresh_python_process_direct_cells",
+    "fresh_python_process": true,
+    "jupyter_kernel": false,
+    "note": "Real code cells executed in a fresh Python process; this is not Jupyter kernel validation.",
+    "python_executable": "%USERPROFILE%\\anaconda3\\python.exe",
+    "status": "passed"
+  },
+  "official_yoy_reconciliations": [
+    {
+      "calculated_yoy_pct": 53.71900826446283,
+      "metric_id": "M001",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-09-30",
+      "reported_yoy_pct": 54.0,
+      "rounding_high_pct": 54.244306418219466,
+      "rounding_low_pct": 53.195876288659825
+    },
+    {
+      "calculated_yoy_pct": 36.101083032490976,
+      "metric_id": "M002",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-09-30",
+      "reported_yoy_pct": 36.0,
+      "rounding_high_pct": 36.24322697170379,
+      "rounding_low_pct": 35.959110042092625
+    },
+    {
+      "calculated_yoy_pct": 48.27586206896552,
+      "metric_id": "M004",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-09-30",
+      "reported_yoy_pct": 47.0,
+      "rounding_high_pct": 50.43478260869565,
+      "rounding_low_pct": 46.153846153846146
+    },
+    {
+      "calculated_yoy_pct": 45.3421269579555,
+      "metric_id": "M005",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-09-30",
+      "reported_yoy_pct": 45.0,
+      "rounding_high_pct": 45.443298969072174,
+      "rounding_low_pct": 45.24103831891224
+    },
+    {
+      "calculated_yoy_pct": 37.6953125,
+      "metric_id": "M006",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-09-30",
+      "reported_yoy_pct": 38.0,
+      "rounding_high_pct": 37.77271247150769,
+      "rounding_low_pct": 37.61796290270094
+    },
+    {
+      "calculated_yoy_pct": 39.94216125094461,
+      "metric_id": "M007",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-09-30",
+      "reported_yoy_pct": 40.0,
+      "rounding_high_pct": 39.94303298491897,
+      "rounding_low_pct": 39.94128952330438
+    },
+    {
+      "calculated_yoy_pct": 48.81964117091595,
+      "metric_id": "M009",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-09-30",
+      "reported_yoy_pct": 49.0,
+      "rounding_high_pct": 48.937175247992435,
+      "rounding_low_pct": 48.70221802737138
+    },
+    {
+      "calculated_yoy_pct": 50.557620817843876,
+      "metric_id": "M001",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-12-31",
+      "reported_yoy_pct": 51.0,
+      "rounding_high_pct": 51.02420856610801,
+      "rounding_low_pct": 50.09276437847867
+    },
+    {
+      "calculated_yoy_pct": 32.01357466063348,
+      "metric_id": "M002",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-12-31",
+      "reported_yoy_pct": 32.0,
+      "rounding_high_pct": 32.14487832484436,
+      "rounding_low_pct": 31.88241944601471
+    },
+    {
+      "calculated_yoy_pct": 43.939393939393945,
+      "metric_id": "M004",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-12-31",
+      "reported_yoy_pct": 43.0,
+      "rounding_high_pct": 45.80152671755726,
+      "rounding_low_pct": 42.10526315789473
+    },
+    {
+      "calculated_yoy_pct": 49.873257287705954,
+      "metric_id": "M005",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-12-31",
+      "reported_yoy_pct": 50.0,
+      "rounding_high_pct": 49.95245641838353,
+      "rounding_low_pct": 49.79410833069367
+    },
+    {
+      "calculated_yoy_pct": 42.19895287958116,
+      "metric_id": "M006",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-12-31",
+      "reported_yoy_pct": 42.0,
+      "rounding_high_pct": 42.26237234878243,
+      "rounding_low_pct": 42.13556660560063
+    },
+    {
+      "calculated_yoy_pct": 38.788621386230425,
+      "metric_id": "M007",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-12-31",
+      "reported_yoy_pct": 39.0,
+      "rounding_high_pct": 38.78941215820164,
+      "rounding_low_pct": 38.787830619496575
+    },
+    {
+      "calculated_yoy_pct": 48.34042553191491,
+      "metric_id": "M009",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2024-12-31",
+      "reported_yoy_pct": 48.0,
+      "rounding_high_pct": 48.44614729672203,
+      "rounding_low_pct": 48.23479370480648
+    },
+    {
+      "calculated_yoy_pct": 48.407643312101925,
+      "metric_id": "M001",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-03-31",
+      "reported_yoy_pct": 49.0,
+      "rounding_high_pct": 48.80382775119618,
+      "rounding_low_pct": 48.01271860095391
+    },
+    {
+      "calculated_yoy_pct": 33.4016393442623,
+      "metric_id": "M002",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-03-31",
+      "reported_yoy_pct": 33.0,
+      "rounding_high_pct": 33.52127114300358,
+      "rounding_low_pct": 33.28213005632359
+    },
+    {
+      "calculated_yoy_pct": 39.189189189189186,
+      "metric_id": "M004",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-03-31",
+      "reported_yoy_pct": 40.0,
+      "rounding_high_pct": 40.816326530612244,
+      "rounding_low_pct": 37.583892617449656
+    },
+    {
+      "calculated_yoy_pct": 43.77708978328172,
+      "metric_id": "M005",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-03-31",
+      "reported_yoy_pct": 44.0,
+      "rounding_high_pct": 43.8525859399195,
+      "rounding_low_pct": 43.70164035902195
+    },
+    {
+      "calculated_yoy_pct": 37.51898734177217,
+      "metric_id": "M006",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-03-31",
+      "reported_yoy_pct": 38.0,
+      "rounding_high_pct": 37.57913395796406,
+      "rounding_low_pct": 37.45887117185522
+    },
+    {
+      "calculated_yoy_pct": 37.713439926471025,
+      "metric_id": "M007",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-03-31",
+      "reported_yoy_pct": 38.0,
+      "rounding_high_pct": 37.714149296489154,
+      "rounding_low_pct": 37.7127305606866
+    },
+    {
+      "calculated_yoy_pct": 45.02657555049356,
+      "metric_id": "M009",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-03-31",
+      "reported_yoy_pct": 45.0,
+      "rounding_high_pct": 45.119635396885705,
+      "rounding_low_pct": 44.9335863377609
+    },
+    {
+      "calculated_yoy_pct": 39.88269794721408,
+      "metric_id": "M001",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-06-30",
+      "reported_yoy_pct": 40.0,
+      "rounding_high_pct": 40.23494860499264,
+      "rounding_low_pct": 39.53147877013179
+    },
+    {
+      "calculated_yoy_pct": 23.841698841698864,
+      "metric_id": "M002",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-06-30",
+      "reported_yoy_pct": 24.0,
+      "rounding_high_pct": 23.949782713664924,
+      "rounding_low_pct": 23.733719247467455
+    },
+    {
+      "calculated_yoy_pct": 36.25000000000001,
+      "metric_id": "M004",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-06-30",
+      "reported_yoy_pct": 37.0,
+      "rounding_high_pct": 37.73584905660379,
+      "rounding_low_pct": 34.78260869565215
+    },
+    {
+      "calculated_yoy_pct": 45.239616613418534,
+      "metric_id": "M005",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-06-30",
+      "reported_yoy_pct": 45.0,
+      "rounding_high_pct": 45.3179929689997,
+      "rounding_low_pct": 45.161290322580626
+    },
+    {
+      "calculated_yoy_pct": 40.9784324039979,
+      "metric_id": "M006",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-06-30",
+      "reported_yoy_pct": 41.0,
+      "rounding_high_pct": 41.04183109707973,
+      "rounding_low_pct": 40.9150670523271
+    },
+    {
+      "calculated_yoy_pct": 41.46203323108671,
+      "metric_id": "M007",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-06-30",
+      "reported_yoy_pct": 41.0,
+      "rounding_high_pct": 41.46271025338353,
+      "rounding_low_pct": 41.461356212586395
+    },
+    {
+      "calculated_yoy_pct": 46.421125781792895,
+      "metric_id": "M009",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-06-30",
+      "reported_yoy_pct": 46.0,
+      "rounding_high_pct": 46.50677789363922,
+      "rounding_low_pct": 46.33553317123997
+    },
+    {
+      "calculated_yoy_pct": 35.752688172043,
+      "metric_id": "M001",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-09-30",
+      "reported_yoy_pct": 36.0,
+      "rounding_high_pct": 36.06998654104976,
+      "rounding_low_pct": 35.436241610738264
+    },
+    {
+      "calculated_yoy_pct": 19.628647214854134,
+      "metric_id": "M002",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-09-30",
+      "reported_yoy_pct": 20.0,
+      "rounding_high_pct": 19.725785050862466,
+      "rounding_low_pct": 19.531595227574016
+    },
+    {
+      "calculated_yoy_pct": 33.72093023255815,
+      "metric_id": "M004",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-09-30",
+      "reported_yoy_pct": 34.0,
+      "rounding_high_pct": 35.08771929824563,
+      "rounding_low_pct": 32.369942196531774
+    },
+    {
+      "calculated_yoy_pct": 36.2847419171866,
+      "metric_id": "M005",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-09-30",
+      "reported_yoy_pct": 36.0,
+      "rounding_high_pct": 36.323687943262414,
+      "rounding_low_pct": 36.24581797561666
+    },
+    {
+      "calculated_yoy_pct": 33.29503546099291,
+      "metric_id": "M006",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-09-30",
+      "reported_yoy_pct": 33.0,
+      "rounding_high_pct": 33.32679120359423,
+      "rounding_low_pct": 33.26329472937839
+    },
+    {
+      "calculated_yoy_pct": 41.080719025514824,
+      "metric_id": "M007",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-09-30",
+      "reported_yoy_pct": 41.0,
+      "rounding_high_pct": 41.0813449052019,
+      "rounding_low_pct": 41.0800931490775
+    },
+    {
+      "calculated_yoy_pct": 45.61611675126904,
+      "metric_id": "M009",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-09-30",
+      "reported_yoy_pct": 46.0,
+      "rounding_high_pct": 45.66264677880041,
+      "rounding_low_pct": 45.569616238503016
+    },
+    {
+      "calculated_yoy_pct": 30.12345679012347,
+      "metric_id": "M001",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-12-31",
+      "reported_yoy_pct": 30.0,
+      "rounding_high_pct": 30.407911001236076,
+      "rounding_low_pct": 29.839704069050587
+    },
+    {
+      "calculated_yoy_pct": 14.053127677806332,
+      "metric_id": "M002",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-12-31",
+      "reported_yoy_pct": 14.0,
+      "rounding_high_pct": 14.144877839691382,
+      "rounding_low_pct": 13.961456102783721
+    },
+    {
+      "calculated_yoy_pct": 28.421052631578945,
+      "metric_id": "M004",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-12-31",
+      "reported_yoy_pct": 28.0,
+      "rounding_high_pct": 29.62962962962965,
+      "rounding_low_pct": 27.22513089005234
+    },
+    {
+      "calculated_yoy_pct": 25.412262156448207,
+      "metric_id": "M005",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-12-31",
+      "reported_yoy_pct": 25.0,
+      "rounding_high_pct": 25.459928103193086,
+      "rounding_low_pct": 25.36461636017755
+    },
+    {
+      "calculated_yoy_pct": 24.005891016200298,
+      "metric_id": "M006",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-12-31",
+      "reported_yoy_pct": 24.0,
+      "rounding_high_pct": 24.047136807217818,
+      "rounding_low_pct": 23.964660408614
+    },
+    {
+      "calculated_yoy_pct": 34.98830827964685,
+      "metric_id": "M007",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2025-12-31",
+      "reported_yoy_pct": 35.0,
+      "rounding_high_pct": 34.98886897845137,
+      "rounding_low_pct": 34.98774758351806
+    },
+    {
+      "calculated_yoy_pct": 21.244635193133043,
+      "metric_id": "M001",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-03-31",
+      "reported_yoy_pct": 21.0,
+      "rounding_high_pct": 21.48227712137485,
+      "rounding_low_pct": 21.00750267952842
+    },
+    {
+      "calculated_yoy_pct": 5.8371735791090895,
+      "metric_id": "M002",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-03-31",
+      "reported_yoy_pct": 6.0,
+      "rounding_high_pct": 5.916250480215179,
+      "rounding_low_pct": 5.758157389635321
+    },
+    {
+      "calculated_yoy_pct": 21.359223300970864,
+      "metric_id": "M004",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-03-31",
+      "reported_yoy_pct": 21.0,
+      "rounding_high_pct": 22.4390243902439,
+      "rounding_low_pct": 20.289855072463748
+    },
+    {
+      "calculated_yoy_pct": 15.460809646856166,
+      "metric_id": "M005",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-03-31",
+      "reported_yoy_pct": 15.0,
+      "rounding_high_pct": 15.5072151626104,
+      "rounding_low_pct": 15.414424111948332
+    },
+    {
+      "calculated_yoy_pct": 13.586156111929304,
+      "metric_id": "M006",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-03-31",
+      "reported_yoy_pct": 14.0,
+      "rounding_high_pct": 13.625483336402144,
+      "rounding_low_pct": 13.546843364623573
+    },
+    {
+      "calculated_yoy_pct": 26.533415964948006,
+      "metric_id": "M007",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-03-31",
+      "reported_yoy_pct": 27.0,
+      "rounding_high_pct": 26.533906844209444,
+      "rounding_low_pct": 26.532925087813975
+    },
+    {
+      "calculated_yoy_pct": 31.365445026177994,
+      "metric_id": "M009",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-03-31",
+      "reported_yoy_pct": 31.0,
+      "rounding_high_pct": 31.400104739460577,
+      "rounding_low_pct": 31.330803454593024
+    },
+    {
+      "calculated_yoy_pct": 23.060796645702307,
+      "metric_id": "M001",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-06-30",
+      "reported_yoy_pct": 23.0,
+      "rounding_high_pct": 23.294858342077628,
+      "rounding_low_pct": 22.82722513089006
+    },
+    {
+      "calculated_yoy_pct": 9.58690568978955,
+      "metric_id": "M002",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-06-30",
+      "reported_yoy_pct": 10.0,
+      "rounding_high_pct": 9.66861598440547,
+      "rounding_low_pct": 9.505259057265247
+    },
+    {
+      "calculated_yoy_pct": 16.5137614678899,
+      "metric_id": "M004",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-06-30",
+      "reported_yoy_pct": 17.0,
+      "rounding_high_pct": 17.511520737327203,
+      "rounding_low_pct": 15.525114155251106
+    },
+    {
+      "calculated_yoy_pct": 10.125824901011882,
+      "metric_id": "M005",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-06-30",
+      "reported_yoy_pct": 10.0,
+      "rounding_high_pct": 10.150275027502742,
+      "rounding_low_pct": 10.10138552892017
+    },
+    {
+      "calculated_yoy_pct": 7.8559701492537215,
+      "metric_id": "M006",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-06-30",
+      "reported_yoy_pct": 8.0,
+      "rounding_high_pct": 7.876282888598607,
+      "rounding_low_pct": 7.835664987875379
+    },
+    {
+      "calculated_yoy_pct": 18.309713991239374,
+      "metric_id": "M007",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-06-30",
+      "reported_yoy_pct": 18.0,
+      "rounding_high_pct": 18.310146691270468,
+      "rounding_low_pct": 18.30928129292355
+    },
+    {
+      "calculated_yoy_pct": 22.465590887517806,
+      "metric_id": "M009",
+      "official_rounding_tolerance_percentage_points": 0.5,
+      "passed": true,
+      "period_end": "2026-06-30",
+      "reported_yoy_pct": 22.0,
+      "rounding_high_pct": 22.494896748160475,
+      "rounding_low_pct": 22.436298932384368
+    }
+  ],
+  "outputs": {
+    "figures": [
+      "analysis/figures/01_active_scale_and_frequency.png",
+      "analysis/figures/02_dau_yoy_log_decomposition.png",
+      "analysis/figures/03_subscribers_and_subscription_bookings.png",
+      "analysis/figures/04_bookings_and_revenue_timing.png",
+      "analysis/figures/05_subscription_commercial_share.png"
+    ],
+    "tables": {
+      "business_diagnostics": {
+        "path": "data/public/business_diagnostics.csv",
+        "rows": 64
+      },
+      "commercial_structure": {
+        "path": "data/public/commercial_structure.csv",
+        "rows": 8
+      },
+      "engagement_decomposition": {
+        "path": "data/public/engagement_decomposition.csv",
+        "rows": 16
+      }
+    }
+  },
+  "runtime": {
+    "matplotlib": "3.10.0",
+    "python": "3.13.5"
+  },
+  "scope": [
+    "global_company"
+  ],
+  "status": "passed",
+  "validation_scope": "local input consistency and arithmetic, not Notebook execution or visual acceptance"
+}

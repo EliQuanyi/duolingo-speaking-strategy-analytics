@@ -1,0 +1,230 @@
+{
+  "version": "stage4-v1.0",
+  "reviewed_on": "2026-10-02",
+  "stage_status": "degraded_pass_conditional_model",
+  "economic_status": "not_identified",
+  "independent_validation": {
+    "status": "passed",
+    "writes": false,
+    "checks": {
+      "comparison_contract_and_units": {
+        "status": "passed",
+        "original_tiers": 3,
+        "common_horizon_days": 90,
+        "economic_parameter_evidence": "D only",
+        "deployment_N_F_and_weights": "unknown"
+      },
+      "independent_27_scenarios": {
+        "status": "passed",
+        "rows": 27,
+        "independent_numeric_comparisons": 540,
+        "method": "Decimal path sums and separately expanded successful/failed workload"
+      },
+      "independent_81_billing_paths": {
+        "status": "passed",
+        "rows": 81,
+        "conserved_marginal_distributions": 27,
+        "free_purchase_diversion_and_original_Max_downgrade": "separate paths"
+      },
+      "independent_360_joint_sensitivity": {
+        "status": "passed",
+        "rows": 360,
+        "independent_numeric_comparisons": 2880,
+        "method": "independent Decimal; fixed offer dose and moving paid-path workload"
+      },
+      "independent_18_thresholds": {
+        "status": "passed",
+        "rows": 18,
+        "thresholds_substituted_independently": 51,
+        "negative_unit_workload": "inequality reversal checked",
+        "undefined_thresholds": "not divided by zero"
+      },
+      "public_interface_and_boundary_checks": {
+        "status": "passed",
+        "independent_arithmetic_evidence": false,
+        "rejected_inputs": [
+          {
+            "case": "nonconserved path probability",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "negative path probability",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "duplicate path ID",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "negative unit cost",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "nonfinite cost",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "boolean cost",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "deployment N silently filled",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "tier weights silently filled",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "fixed total silently filled",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "wrong common currency",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "wrong common horizon",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "economic inputs called facts",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "unverified rights called verified",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "offer attempts exceed cap",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "effective time exceeds billable successful time",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "workload exceeds offer limit",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "adoption above one",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "original donor overspend",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "two shifts overspend shared donor",
+            "status": "rejected_as_expected"
+          },
+          {
+            "case": "P0 given a path uplift",
+            "status": "rejected_as_expected"
+          }
+        ],
+        "normalization_invariance": "passed",
+        "unit_price_denominator_signs": [
+          "positive",
+          "zero",
+          "negative"
+        ],
+        "shared_donor_threshold_cap": "passed",
+        "gain_slope_signs": [
+          "positive",
+          "zero",
+          "negative"
+        ],
+        "zero_gain_slope_feasible_and_infeasible_burdens": "passed",
+        "zero_loss_slope": "passed"
+      },
+      "saved_fresh_direct_Notebook_outputs": {
+        "status": "passed",
+        "code_cells_with_actual_execution_counts": 6,
+        "actual_outputs": 6,
+        "html_outputs": 3,
+        "png_outputs_matched_to_current_files": 2,
+        "rendered_tables_matched_to_current_CSV": 3,
+        "standard_jupyter_kernel": "not validated",
+        "limitation": "Inspects saved direct execution metadata and actual outputs; does not independently re-execute cells or certify a process from metadata alone"
+      },
+      "read_only_artifact_hashes": {
+        "status": "passed",
+        "unchanged_artifacts": 7
+      }
+    },
+    "scope": "Local arithmetic, contract, interfaces and saved direct Notebook provenance only",
+    "not_validated": [
+      "real entitlements",
+      "real costs or business uplift",
+      "global-policy spillover causality",
+      "full-population learning effect",
+      "standard Jupyter kernel",
+      "real strategy winner"
+    ]
+  },
+  "fresh_process_execution": {
+    "status": "passed",
+    "fresh_python_process": true,
+    "code_cells": 6,
+    "executor": "direct_cells",
+    "standard_kernel": "not_validated",
+    "economic_effect": "not_identified"
+  },
+  "rebuild_consistency": {
+    "status": "passed",
+    "identical_artifacts": 9,
+    "scope": "4 derivative CSVs, parameter/strategy CSVs, Notebook and 2 PNGs; not source truth"
+  },
+  "input_sha256": {
+    "quant/scenario_inputs.json": "ef20687da8b2ed8d6fee96195755774aad9cb4f36c01380d593a3c3112f4b38d",
+    "quant/opportunity_model.py": "1fabddf1a9b4bf68b708ee03e919f29a46526ed86741803fdc8cefaecce4f241",
+    "scripts/run_stage4.py": "cec93f8153ce0d29b9e1e0c8e739d083474737102b8b6c2ed9d9de318114d06a",
+    "scripts/verify_stage4.py": "5bd13889e6944f0393869731c8a3ba58c017c9cfddbbc9c29210718cc0168e0c",
+    "data/source_register.csv": "fb3fca3bade4e2ab2909dac6597bb89a8a5971a19323af1aacbdea513bab30ec"
+  },
+  "output_sha256": {
+    "data/public/scenario_results.csv": "4b5fa60f06a4c221d08b1022548f7c169254545fc78fdc5ab3cbc13c3dbc1ffb",
+    "data/public/stage4_billing_paths.csv": "dc794a2b98bd9ad6fc89c62327d2ae2731f61cd01331531c2ab87656ffc20b1f",
+    "data/public/stage4_break_even.csv": "04951ec6333bb8add8a7fb05ed35ee7e4cdc9b4923b7ccefb6e174a172de738d",
+    "data/public/stage4_sensitivity.csv": "24d397634b8d4b17f3f4545413070f611901366106921596e5f781e51e0ff3da",
+    "quant/parameter_register.csv": "1713e16c1d01018d1c33a7179912fe7f876ad0cdf61b2092e86d2eef31e392ca",
+    "quant/strategy_comparison.csv": "3796790a08e0437fa9c2f853779c421c566777c7616ce961975f1be74b6e6251",
+    "quant/opportunity_model.ipynb": "1e362e2b1f97ede71345ea373503df511818024e4e7786630b64af3f724d5271",
+    "analysis/figures/stage4/01_response_intensity.png": "c336c31b5eb84faf1fe740dc2291cab1ee662a41f0d24f6e5729ae41aff3dedd",
+    "analysis/figures/stage4/02_cost_diversion_boundary.png": "6e457d338dfc80a0ad600840af2fc7a397fd16c7790011c4c763a544ac44b482"
+  },
+  "business_review": {
+    "method": "separate agent reviewed decision logic; root checked source text and fixed two material wording/assumption boundaries",
+    "status": "passed_with_caveats",
+    "remaining": "rights, real contribution/cost, population weights, fixed deployment cost and original-Max spillover unknown"
+  },
+  "visual_review": {
+    "status": "passed",
+    "figures": 2,
+    "checked_by": "root via actual PNG reads",
+    "checks": [
+      "axes and units",
+      "D/evidence caveats",
+      "labels/legend not clipped",
+      "break-even contour",
+      "shared color scale covers complete domain without clipping"
+    ],
+    "scope": "two actual authored PNGs; no standard kernel or whole-app UI certification"
+  },
+  "note": "Wrapper saves this receipt; independent verifier itself writes no files. Hashes establish byte agreement, not empirical validity. No Jupyter kernel attempted.",
+  "closeout_checks": {
+    "status": "passed",
+    "local_markdown_links_existing": 59,
+    "python_syntax_files": 3,
+    "current_input_and_output_hashes_matched": 14,
+    "source_ids_unique": 20,
+    "parameter_rows": 135,
+    "parameter_classification": "D/U only; real parameters null",
+    "strategy_rows": 3,
+    "strategy_required_business_fields": "present",
+    "git_diff_whitespace": "passed; ordinary LF/CRLF notices only",
+    "scope": "final authored entries and intended stage metadata; preexisting changes preserved"
+  }
+}

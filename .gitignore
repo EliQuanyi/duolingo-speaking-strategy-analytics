@@ -10,6 +10,9 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 node_modules/
+.codex/local/
+# Personal automation endpoint is configured locally, outside the portfolio.
+scripts/request_data.ps1
 
 # Local, potentially restricted, or large data
 data/raw/

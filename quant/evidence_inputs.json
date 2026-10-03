@@ -1,0 +1,50 @@
+{
+  "version": "stage4-v2.0",
+  "as_of": "2026-10-02",
+  "purpose": "Evidence-constrained decision support; no authored economic estimates",
+  "population_id": "H1_Japanese_L1_intermediate_English_task",
+  "population_boundary": "Course level is not speaking proficiency. Device, individual plan and eligible subgroup remain to be verified; no current population size is asserted.",
+  "period_start": null,
+  "period_end": null,
+  "currency": null,
+  "contract": {
+    "all_originally_assigned_including_zero_users": null,
+    "comparable_population_and_period": null,
+    "net_contribution_excludes_ai_and_includes_refunds_non_ai_fees": null,
+    "serving_cost_includes_control_failures_and_paid_follow_on": null,
+    "assignment_identification_verified": null
+  },
+  "policies": {
+    "P1": {
+      "definition": "Candidate incremental Lily access for original Super, only if actual current rights leave a verified increment",
+      "increment_verified": null,
+      "deployment_effect_scope_matched": null,
+      "fixed_incremental_cost_total": null,
+      "fixed_cost_source_ref": null,
+      "groups": [
+        {"original_tier": "Free", "effect_scope": "potential_indirect_effect_not_assumed_zero", "assignment_n_t": null, "assignment_n_c": null, "mean_contribution_t": null, "mean_contribution_c": null, "mean_serving_cost_t": null, "mean_serving_cost_c": null, "deployment_n": null, "measurement_basis": null, "economic_source_refs": [], "deployment_source_ref": null},
+        {"original_tier": "Super", "effect_scope": "candidate_direct_target_requires_actual_increment", "assignment_n_t": null, "assignment_n_c": null, "mean_contribution_t": null, "mean_contribution_c": null, "mean_serving_cost_t": null, "mean_serving_cost_c": null, "deployment_n": null, "measurement_basis": null, "economic_source_refs": [], "deployment_source_ref": null},
+        {"original_tier": "Max", "effect_scope": "policy_spillover_requires_separate_identification", "assignment_n_t": null, "assignment_n_c": null, "mean_contribution_t": null, "mean_contribution_c": null, "mean_serving_cost_t": null, "mean_serving_cost_c": null, "deployment_n": null, "measurement_basis": null, "economic_source_refs": [], "deployment_source_ref": null}
+      ]
+    },
+    "P2": {
+      "definition": "Candidate limited Lily trial for original Free, only if no equivalent trial already exists; dose and expiry not set",
+      "increment_verified": null,
+      "deployment_effect_scope_matched": null,
+      "fixed_incremental_cost_total": null,
+      "fixed_cost_source_ref": null,
+      "groups": [
+        {"original_tier": "Free", "effect_scope": "candidate_direct_target_requires_actual_increment", "assignment_n_t": null, "assignment_n_c": null, "mean_contribution_t": null, "mean_contribution_c": null, "mean_serving_cost_t": null, "mean_serving_cost_c": null, "deployment_n": null, "measurement_basis": null, "economic_source_refs": [], "deployment_source_ref": null},
+        {"original_tier": "Super", "effect_scope": "potential_indirect_effect_not_assumed_zero", "assignment_n_t": null, "assignment_n_c": null, "mean_contribution_t": null, "mean_contribution_c": null, "mean_serving_cost_t": null, "mean_serving_cost_c": null, "deployment_n": null, "measurement_basis": null, "economic_source_refs": [], "deployment_source_ref": null},
+        {"original_tier": "Max", "effect_scope": "policy_spillover_requires_separate_identification", "assignment_n_t": null, "assignment_n_c": null, "mean_contribution_t": null, "mean_contribution_c": null, "mean_serving_cost_t": null, "mean_serving_cost_c": null, "deployment_n": null, "measurement_basis": null, "economic_source_refs": [], "deployment_source_ref": null}
+      ]
+    }
+  },
+  "limitations": [
+    "Unknown is null, never zero. Current configuration cannot produce empirical economic results.",
+    "Source refs and contract flags are audit declarations; software does not authenticate a source or establish causality.",
+    "Quoted subscription prices, company aggregates and selected-completer study outcomes are not arm contribution or cost inputs.",
+    "No precise horizon, quota, currency, deployment size, parameter range or probability distribution is imposed without evidence.",
+    "The P0 reference retains actual existing rights; its incremental difference from itself is zero, not its absolute serving cost."
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "engine": "@oai/artifact-tool bundled runtime",
+  "cases": [
+    {
+      "name": "all_inputs_blank",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪"
+    },
+    {
+      "name": "complete_fixture_zero_baseline_zero_approved_budget",
+      "expected": "绿色：可提交受限验证审批",
+      "actual": "绿色：可提交受限验证审批"
+    },
+    {
+      "name": "missing_currency_cannot_green",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪"
+    },
+    {
+      "name": "whitespace_currency_cannot_green",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪"
+    },
+    {
+      "name": "numeric_currency_invalid",
+      "expected": "红色：输入口径无效",
+      "actual": "红色：输入口径无效"
+    },
+    {
+      "name": "missing_contract_cannot_green",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪"
+    },
+    {
+      "name": "missing_budget_approval_cannot_green",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪"
+    },
+    {
+      "name": "zero_mde_invalid",
+      "expected": "红色：输入口径无效",
+      "actual": "红色：输入口径无效"
+    },
+    {
+      "name": "failed_permission_even_with_other_blank",
+      "expected": "红色：停止当前方案",
+      "actual": "红色：停止当前方案"
+    },
+    {
+      "name": "final_restore_all_blank",
+      "expected": "黄色：未就绪",
+      "actual": "黄色：未就绪"
+    }
+  ],
+  "errors": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "inspect": "{\"kind\":\"table\",\"sheet\":\"未来KPI\",\"address\":\"B5:I15\",\"rows\":11,\"cols\":8,\"values\":[[\"黄色：未就绪\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"黄色输入格当前留空。填写会重算设计就绪状态；填写不生成实验结果。绿色仅表示可提交受限验证审批。\",\"黄色输入格当前留空。填写会重算设计就绪状态；填写不生成实验结果。绿色仅表示可提交受限验证审批。\",\"黄色输入格当前留空。填写会重算设计就绪状态；填写不生成实验结果。绿色仅表示可提交受限验证审批。\",\"黄色输入格当前留空。填写会重算设计就绪状态；填写不生成实验结果。绿色仅表示可提交受限验证审批。\",\"黄色输入格当前留空。填写会重算设计就绪状态；填写不生成实验结果。绿色仅表示可提交受限验证审批。\",\"黄色输入格当前留空。填写会重算设计就绪状态；填写不生成实验结果。绿色仅表示可提交受限验证审批。\",\"黄色输入格当前留空。填写会重算设计就绪状态；填写不生成实验结果。绿色仅表示可提交受限验证审批。\",\"黄色输入格当前留空。填写会重算设计就绪状态；填写不生成实验结果。绿色仅表示可提交受限验证审批。\"],[null,null,null,null,null,null,null,null],[\"前测baseline均值（分）\",\"前测baseline均值（分）\",null,null,\"前测SD（分，>0）\",\"前测SD（分，>0）\",null,null],[\"primary MDE（分，>0）\",\"primary MDE（分，>0）\",null,null,\"学习window HL（天，>0）\",\"学习window HL（天，>0）\",null,null],[\"调用cap（次/账户，≥0）\",\"调用cap（次/账户，≥0）\",null,null,\"账单/预算currency\",\"账单/预算currency\",null,null],[\"完整批准budget cap（≥0）\",\"完整批准budget cap（≥0）\",null,null,\"匹配数据/来源定位\",\"匹配数据/来源定位\",null,null],[\"完整数据契约审核\",\"完整数据契约审核\",null,null,\"预算审批审核\",\"预算审批审核\",null,null],[\"实际新增资格审核\",\"实际新增资格审核\",null,null,\"合法实施权限审核\",\"合法实施权限审核\",null,null],[\"冻结版本/N/护栏阈值\",\"冻结版本/N/护栏阈值\",null,null,\"目标人群/权益/日期版本\",\"目标人群/权益/日期版本\",null,null],[\"成熟经营window HB（天）\",\"成熟经营window HB（天）\",null,null,\"分组N/缺测/power来源\",\"分组N/缺测/power来源\",null,null]]}",
+  "series": [
+    {
+      "formula": "'证据与就绪'!$C$24:$C$31",
+      "categoryFormula": "'证据与就绪'!$B$24:$B$31"
+    }
+  ],
+  "provenance": [
+    {
+      "cell": "D24",
+      "source_id": "S004",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000156208824000248/q3fy24duolingo09-30x24shar.htm",
+      "report_period": "2024-07-01/2024-09-30",
+      "collected_on": "2026-09-30",
+      "unit": "million users",
+      "definition": "Global company quarterly-average DAU. Not a Video Call measure.",
+      "source_locator": "p.8; Summary of Financial and Key Operating Metrics; DAU; web lines 124"
+    },
+    {
+      "cell": "D25",
+      "source_id": "S005",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000039/q4fy24duolingo12-31x24shar.htm",
+      "report_period": "2024-10-01/2024-12-31",
+      "collected_on": "2026-09-30",
+      "unit": "million users",
+      "definition": "Global company quarterly-average DAU. Not a Video Call measure.",
+      "source_locator": "p.11; Summary of Financial and Key Operating Metrics; DAU; web lines 153"
+    },
+    {
+      "cell": "D26",
+      "source_id": "S006",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000098/q1fy25duolingo3-31x25share.htm",
+      "report_period": "2025-01-01/2025-03-31",
+      "collected_on": "2026-09-30",
+      "unit": "million users",
+      "definition": "Global company quarterly-average DAU. Not a Video Call measure.",
+      "source_locator": "p.9; Summary of Financial and Key Operating Metrics; DAU; web lines 145"
+    },
+    {
+      "cell": "D27",
+      "source_id": "S007",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000165/q2fy25duolingo6-30x25share.htm",
+      "report_period": "2025-04-01/2025-06-30",
+      "collected_on": "2026-09-30",
+      "unit": "million users",
+      "definition": "Global company quarterly-average DAU. Not a Video Call measure.",
+      "source_locator": "p.8; Summary of Financial and Key Operating Metrics; DAU; web lines 113"
+    },
+    {
+      "cell": "D28",
+      "source_id": "S008",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828025049514/q3fy25duolingo9-30x25share.htm",
+      "report_period": "2025-07-01/2025-09-30",
+      "collected_on": "2026-09-30",
+      "unit": "million users",
+      "definition": "Global company quarterly-average DAU. Not a Video Call measure.",
+      "source_locator": "摘要第7页DAU行，web L101"
+    },
+    {
+      "cell": "D29",
+      "source_id": "S009",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012246/q4fy25duolingo12-31x25shar.htm",
+      "report_period": "2025-10-01/2025-12-31",
+      "collected_on": "2026-09-30",
+      "unit": "million users",
+      "definition": "Global company quarterly-average DAU. Not a Video Call measure.",
+      "source_locator": "摘要第8页DAU行，web L126"
+    },
+    {
+      "cell": "D30",
+      "source_id": "S010",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026029790/q1fy26duolingo3-31x26share.htm",
+      "report_period": "2026-01-01/2026-03-31",
+      "collected_on": "2026-09-30",
+      "unit": "million users",
+      "definition": "Global company quarterly-average DAU. Not a Video Call measure.",
+      "source_locator": "摘要第8页DAU行，web L121；定义第13页L230"
+    },
+    {
+      "cell": "D31",
+      "source_id": "S002",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026053603/duol-20260630.htm",
+      "report_period": "2026-04-01/2026-06-30",
+      "collected_on": "2026-09-30",
+      "unit": "million users",
+      "definition": "Global company quarterly-average DAU. Not a Video Call measure.",
+      "source_locator": "MD&A Key Operating Metrics, three months ended June 30, 2026; DAU row"
+    }
+  ],
+  "actualDataUntouched": true
+}

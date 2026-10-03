@@ -1,0 +1,5 @@
+{
+  "engine": "PDF.js with bundled @napi-rs/canvas",
+  "pages": 2,
+  "actualPdfRendered": true
+}

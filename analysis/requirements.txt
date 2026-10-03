@@ -1,0 +1,9 @@
+# Existing, inspected environment versions. No installation was performed.
+# CSV/JSON/math transformations use the Python standard library.
+matplotlib==3.10.0
+nbformat==5.10.4
+nbclient==0.10.2
+IPython==8.30.0
+ipykernel==6.29.5
+jupyter-client==8.6.3
+# Direct execution uses IPython rich-output capture, without ZeroMQ/kernel transport.

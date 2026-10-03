@@ -1,0 +1,257 @@
+{
+  "version": "stage4-v2.0",
+  "reviewed_on": "2026-10-02",
+  "documentation_refresh": {
+    "reviewed_on": "2026-10-03",
+    "scope": "README Stage5 handoff status corrected for publication; model, economic inputs, outputs and original source review unchanged"
+  },
+  "stage_status": "degraded_pass_evidence_constrained_accounting_and_handoff",
+  "real_economic_status": "not_identified_not_passed",
+  "generated_output_check": {
+    "version": "stage4-v2.0",
+    "mode": "check_only_no_writes",
+    "generated_files": [
+      "data/public/stage4_economic_readiness.csv",
+      "data/public/stage4_policy_readiness.csv",
+      "data/public/stage4_symbolic_sensitivity.csv",
+      "data/public/stage4_learning_coverage.csv"
+    ],
+    "direct_code_cells_executed": null,
+    "economic_status": "not_identified",
+    "numeric_scenarios_generated": false,
+    "sha256": {
+      "data/public/stage4_economic_readiness.csv": "aac57354e615e0b4d15da4054dfe7533b29ae95533c1dd8bb65056f74148b4e5",
+      "data/public/stage4_policy_readiness.csv": "28224761bd6153c9fe4d23a0c3e37f49adaba17bf55f407f91c2486bfd0e453b",
+      "data/public/stage4_symbolic_sensitivity.csv": "a87b28001bf43434d3cd6587b8847b59b2dcbcb065a54fa4976eb03967684e58",
+      "data/public/stage4_learning_coverage.csv": "411f30856b552ba2f728633033476a256b4b318264943322a513ca355ca7d005"
+    }
+  },
+  "independent_validation": {
+    "status": "passed",
+    "writes": false,
+    "checks": {
+      "unknown_economic_parameters_and_outputs": {
+        "status": "passed",
+        "economic_groups": 6,
+        "policy_rows": 2,
+        "all_economic_outputs": "unknown_not_zero",
+        "source_audit_boundary": "Declarations and software checks are not independent source authentication"
+      },
+      "independent_symbolic_relations": {
+        "status": "passed",
+        "symbolic_relations": 8,
+        "numeric_economic_thresholds_or_domains": "none"
+      },
+      "independent_registered_learning_counts": {
+        "status": "passed",
+        "independently_recomputed_rows": 2,
+        "assigned_denominator_each_arm": 329,
+        "computed_quantity": "not included in analysis; not natural adoption, full ITT or economic uplift",
+        "limitation": "Recomputes registered source inputs; does not re-open or certify original webpages"
+      },
+      "independent_arithmetic_fixtures": {
+        "status": "passed",
+        "independent_contrast_cases": 8,
+        "independent_threshold_cases": 6,
+        "whole_policy_weighted_sum_and_single_F_deduction": "passed",
+        "missing_Max_terms_block_total": "passed",
+        "unknown_or_unmatched_deployment_scope_blocks_total": "passed",
+        "observed_zero_vs_unknown": "passed",
+        "fixture_status": "source-code-only artificial tests; no economic evidence or exported scenarios"
+      },
+      "invalid_inputs_and_basis_gates": {
+        "status": "passed",
+        "invalid_cases_rejected": 61,
+        "cases": [
+          "assignment_n_t invalid domain 0",
+          "assignment_n_t invalid domain -1",
+          "assignment_n_t invalid domain 0.5",
+          "assignment_n_t invalid domain True",
+          "assignment_n_c invalid domain 0",
+          "assignment_n_c invalid domain -1",
+          "assignment_n_c invalid domain 0.5",
+          "assignment_n_c invalid domain True",
+          "deployment_n invalid domain 0",
+          "deployment_n invalid domain -1",
+          "deployment_n invalid domain 0.5",
+          "deployment_n invalid domain True",
+          "threshold deployment domain 0",
+          "threshold deployment domain -1",
+          "threshold deployment domain 0.5",
+          "threshold deployment domain True",
+          "absolute arm cost domain -1",
+          "absolute arm cost domain True",
+          "absolute arm cost domain 'NaN'",
+          "absolute arm cost domain 'Infinity'",
+          "contribution domain True",
+          "contribution domain 'NaN'",
+          "contribution domain 'Infinity'",
+          "fixed expense domain -1",
+          "fixed expense domain True",
+          "fixed expense domain 'NaN'",
+          "numeric/string contract boolean 0",
+          "numeric/string increment boolean 0",
+          "numeric/string deployment scope boolean 0",
+          "numeric/string contract boolean 1",
+          "numeric/string increment boolean 1",
+          "numeric/string deployment scope boolean 1",
+          "numeric/string contract boolean 'true'",
+          "numeric/string increment boolean 'true'",
+          "numeric/string deployment scope boolean 'true'",
+          "numeric output without contract all_originally_assigned_including_zero_users",
+          "numeric output without contract comparable_population_and_period",
+          "numeric output without contract net_contribution_excludes_ai_and_includes_refunds_non_ai_fees",
+          "numeric output without contract serving_cost_includes_control_failures_and_paid_follow_on",
+          "numeric output without contract assignment_identification_verified",
+          "invalid economic measurement basis None",
+          "invalid economic measurement basis 'quoted_plan_price'",
+          "invalid economic measurement basis 'company_aggregate'",
+          "invalid economic measurement basis 'selected_completer_score'",
+          "missing economic source declaration",
+          "missing fixed expense provenance including zero",
+          "deployment without source declaration",
+          "wrong currency shape",
+          "missing common currency with numeric means",
+          "period reversed",
+          "invalid calendar date",
+          "duplicate original tier",
+          "study assigned denominator invalid 0",
+          "study assigned denominator invalid -1",
+          "study assigned denominator invalid 0.5",
+          "study assigned denominator invalid True",
+          "study analysed count exceeds assigned denominator",
+          "duplicate study count field cannot be silently overwritten",
+          "wrong study count unit",
+          "mismatched study window",
+          "mismatched study source"
+        ],
+        "source_verification_limit": "Rejects invalid declarations/bases; source authenticity and causality still require manual review"
+      },
+      "final_generation_isolated_from_D": {
+        "status": "passed",
+        "check_only_runner": "executed under legacy-read and write guards",
+        "read_paths": [
+          "data/public/stage4_economic_readiness.csv",
+          "data/public/stage4_learning_coverage.csv",
+          "data/public/stage4_policy_readiness.csv",
+          "data/public/stage4_public_observations.csv",
+          "data/public/stage4_symbolic_sensitivity.csv",
+          "quant/evidence_inputs.json"
+        ],
+        "legacy_D_reads": 0,
+        "writes": 0,
+        "limitation": "Guards actual Path/builtin reads and statically checks imports on current generation path"
+      },
+      "saved_actual_direct_Notebook_outputs": {
+        "status": "passed",
+        "actual_saved_code_outputs": 3,
+        "stdout_matches_current_artifacts": true,
+        "standard_jupyter_kernel": "not validated",
+        "limitation": "Matches saved actual outputs and method declarations; does not independently re-execute Notebook or authenticate process freshness from metadata alone"
+      },
+      "read_only_artifact_hashes": {
+        "status": "passed",
+        "unchanged_artifacts": 9
+      }
+    },
+    "fixture_evidence": "software tests only; no artificial economics exported",
+    "not_validated": [
+      "original webpage authenticity",
+      "real account entitlements",
+      "causal business or natural-use effects",
+      "actual unit costs",
+      "policy winner or scale readiness",
+      "standard Jupyter kernel"
+    ]
+  },
+  "table_integrity": {
+    "data/public/stage4_public_observations.csv": {
+      "rows": 28,
+      "columns": 23,
+      "status": "metadata_integrity_passed_not_evidence_volume"
+    },
+    "data/public/stage4_learning_coverage.csv": {
+      "rows": 2,
+      "columns": 13,
+      "status": "metadata_integrity_passed_not_evidence_volume"
+    },
+    "data/public/stage4_economic_readiness.csv": {
+      "rows": 6,
+      "columns": 15,
+      "status": "metadata_integrity_passed_not_evidence_volume"
+    },
+    "data/public/stage4_policy_readiness.csv": {
+      "rows": 2,
+      "columns": 8,
+      "status": "metadata_integrity_passed_not_evidence_volume"
+    },
+    "data/public/stage4_symbolic_sensitivity.csv": {
+      "rows": 8,
+      "columns": 5,
+      "status": "metadata_integrity_passed_not_evidence_volume"
+    },
+    "quant/stage4_claim_ledger.csv": {
+      "rows": 16,
+      "columns": 15,
+      "status": "metadata_integrity_passed_not_evidence_volume"
+    },
+    "quant/stage4_gap_register.csv": {
+      "rows": 10,
+      "columns": 15,
+      "status": "metadata_integrity_passed_not_evidence_volume"
+    },
+    "quant/strategy_comparison.csv": {
+      "rows": 3,
+      "columns": 14,
+      "status": "metadata_integrity_passed_not_evidence_volume"
+    }
+  },
+  "claim_gap_source_references": "passed",
+  "authored_local_links": {
+    "checked": 42,
+    "status": "passed"
+  },
+  "current_entry_points": "passed",
+  "legacy_overwrite_prevention": "expected_stop_exit_1_no_D_rebuild",
+  "source_review_scope": {
+    "primary_body_crosschecks": "Root re-read SEC rollout paragraph, Japan App Store IAP list, and same-study company method/count release",
+    "delegated_primary_review": "Bounded Lily supply/metadata lookup, official PDF direct GET403 and same-URL indexed study excerpt; original PDF not fully recovered",
+    "not_authenticated": "Current account entitlement/actual prices, internal bills/costs, all-assigned efficacy, real effect sizes, policy interference, N/F",
+    "cursor": "Not dispatched; local authentication file absent at initial existence check; no remote evidence",
+    "refresh": "Manual official read-to-CSV, not automated web refresh"
+  },
+  "runtime": {
+    "actual_authoring_execution": "run_stage4_final.py --execute-direct in a new Python process, 3 code cells with saved stdout",
+    "independent_notebook_check": "saved outputs checked, not independently re-executed",
+    "standard_jupyter_kernel": "not_validated",
+    "new_dependencies_installed": false
+  },
+  "scope_exclusions": [
+    "v1 D economic files/figures/parameters",
+    "real ROI/ranking or Scale",
+    "future growth point forecasts",
+    "Stage5 execution"
+  ],
+  "sha256": {
+    "data/public/stage4_public_observations.csv": "b14b40f7149b11c3f2fe88a20b6592a264c77bd295a9afb9812a6e6544f211f9",
+    "data/public/stage4_learning_coverage.csv": "411f30856b552ba2f728633033476a256b4b318264943322a513ca355ca7d005",
+    "data/public/stage4_economic_readiness.csv": "aac57354e615e0b4d15da4054dfe7533b29ae95533c1dd8bb65056f74148b4e5",
+    "data/public/stage4_policy_readiness.csv": "28224761bd6153c9fe4d23a0c3e37f49adaba17bf55f407f91c2486bfd0e453b",
+    "data/public/stage4_symbolic_sensitivity.csv": "a87b28001bf43434d3cd6587b8847b59b2dcbcb065a54fa4976eb03967684e58",
+    "quant/stage4_claim_ledger.csv": "e98b4bb4e7fd7ab2faf4be650198f7a4469dd364daf16a800e490841f212114e",
+    "quant/stage4_gap_register.csv": "45fa601b06e9a58c5d4a14e24eacf614c1e31a077c2ed0e3b818f8d76ec359c3",
+    "quant/strategy_comparison.csv": "225046f838dca25fd0315b638dad74b9112a42f7e838355f1818a914f8c84c58",
+    "quant/stage4_final_delivery.md": "b5eca6884a6800f84a3f27e7e362341600d71a8a64225a59009ad5c207576581",
+    "quant/evidence_assumptions.md": "88bd94d5954cdd87ca9f90ddfe0eabc80396dc10b105f5604f3ef7b507e49428",
+    "quant/stage4_public_evidence_v2.md": "c0c11c24d4951f972bfb38eaf04a399ee1f03beec2bb67e044c216d07342484b",
+    "quant/README.md": "812d6639529392ad7c109b9db7a597b106532840105e8e4eea7d1451b031b33f",
+    "quant/evidence_inputs.json": "7a45d139fb9f5b254266a80ea350ae01accf8f0a1a29a8b7ec7f82c2fbf6495c",
+    "quant/evidence_model.py": "4c2e628e74d8d9d3f55a695978cedc0c7425f9521f8263f9a10e31efb40a2a7d",
+    "quant/evidence_model.ipynb": "6c784bfdcd428212030418a0fa39808462b5e30ec1c3c777c1e8e67f7d0502a0",
+    "scripts/run_stage4_final.py": "7e7bf7f0ae7caeefe736819fb38f16db3889dd1857338f5baf748d88f5d7d47d",
+    "scripts/verify_stage4_final.py": "58c40bc8f408fee93ba00325a37a3fb17d609873aae711841fd8cd2606594deb",
+    "scripts/closeout_stage4_final.py": "751d434f1460a2f58ae99dd18b796245f2f3e9cd5d7fbdbb955ed9451b88d607",
+    "data/source_register.csv": "d1a6176f432496e35334e7939ce60049757d5cf62e7c18f0f621c1b8d8469946",
+    "data/data_availability.csv": "a646f0acba1e6e77df9f2a8e79ec6e9e588b07a348356ac2b2224e653627e741"
+  }
+}

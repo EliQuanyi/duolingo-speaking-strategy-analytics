@@ -1,0 +1,92 @@
+{
+  "version": "stage4-v1.0",
+  "as_of": "2026-10-02",
+  "evidence_label": "D_assumption_sensitivity",
+  "policy_status": "conditional_unverified_account_entitlements",
+  "population": "H1: existing individual iOS accounts in Japan; Japanese L1; English course around B1.1; actual speaking level separately screened",
+  "excluded": "new registrations; family subscriptions; already-covered Super accounts for P1; already-entitled Free accounts for P2",
+  "horizon_days": 90,
+  "currency": "USD",
+  "normalization_accounts": 1000,
+  "deployment_accounts": null,
+  "tier_weights": null,
+  "fixed_cost_total_usd": null,
+  "real_parameters": {
+    "account_entitlements_and_remaining_quota": null,
+    "whole_billing_path_contribution_by_arm": null,
+    "invoice_workload_and_contract_rates_by_arm": null,
+    "original_max_policy_spillover": null,
+    "all_assigned_learning_and_transfer": null,
+    "eligible_accounts_by_original_tier": null,
+    "ad_and_course_displacement_contribution": null,
+    "renewal_and_refund_timing_by_arm": null
+  },
+  "fixed_cost_per_account_demo_usd": 0.05,
+  "unit_cost_demo_usd_per_service_minute": 0.04,
+  "other_incremental_cost_demo_usd_per_account": 0.0,
+  "numeric_basis": "All economic numbers below are authored D examples, not estimates, tariffs, actual plan prices, probabilities of scenarios, or data-calibrated bounds. USD is a common accounting unit only.",
+  "path_basis": "Each bin represents a complete H-period billing path with assumed mean contribution after refunds and necessary non-AI variable fees. Equal path contributions and non-offer billable workload across arms are additional D assumptions; endpoint tier alone would not establish these values.",
+  "cost_basis": "Service minute is an illustrative all-pipeline workload unit, not learner speaking time. Offer attempts (including failed attempts/retries) and non-offer paid-entitlement workload are disjoint tags. No extra retry multiplier is used. Actual audio/token/provider mix remains unknown.",
+  "tiers": {
+    "Free": {
+      "path_ids": ["no_paid_path", "first_super_path", "first_max_path"],
+      "control_probabilities": [0.94, 0.045, 0.015],
+      "contribution_usd_per_path": [0.0, 12.0, 24.0],
+      "non_offer_service_minutes_per_path": [0.0, 4.0, 20.0],
+      "gain_from": 0, "gain_to": 1, "loss_from": 2, "loss_to": 1
+    },
+    "Super": {
+      "path_ids": ["lapse_partial_super_path", "maintain_or_renew_super_path", "upgrade_max_path"],
+      "control_probabilities": [0.15, 0.8, 0.05],
+      "contribution_usd_per_path": [3.0, 12.0, 24.0],
+      "non_offer_service_minutes_per_path": [0.0, 0.0, 20.0],
+      "gain_from": 0, "gain_to": 1, "loss_from": 2, "loss_to": 1
+    },
+    "Max": {
+      "path_ids": ["lapse_partial_max_path", "downgrade_super_path", "maintain_or_renew_max_path"],
+      "control_probabilities": [0.1, 0.1, 0.8],
+      "contribution_usd_per_path": [6.0, 14.0, 24.0],
+      "non_offer_service_minutes_per_path": [2.0, 4.0, 20.0],
+      "gain_from": 0, "gain_to": 2, "loss_from": 2, "loss_to": 1
+    }
+  },
+  "policies": {
+    "P0": {"target_tier": "none", "offer_attempt_cap": 0, "max_service_minutes_per_attempt": 4, "definition": "Maintain each account's audited current rights; current account-level rights not verified. Relative delta is zero, not zero absolute operating cost."},
+    "P1": {"target_tier": "Super", "offer_attempt_cap": 24, "max_service_minutes_per_attempt": 4, "definition": "Only originally Super and audited not eligible for Lily under P0: add at most 24 attempts over H. Stop this policy branch if no genuine entitlement increment exists. Original Max spillover is separate, hypothetical."},
+    "P2": {"target_tier": "Free", "offer_attempt_cap": 4, "max_service_minutes_per_attempt": 4, "definition": "Only originally Free and audited not already trial-entitled: first 14 days at most 4 attempts; close at expiry; no automatic charge. Post-purchase paid workload over H is separately included."}
+  },
+  "scenarios": {
+    "low": {
+      "label": "D low response intensity; not a pessimistic forecast",
+      "exposure_probability": 0.7, "adoption_given_exposure": 0.25,
+      "success_probability": 0.75, "successful_service_minutes": 2.0, "failed_service_minutes": 0.5,
+      "effective_minutes_per_success": 1.5,
+      "P1": {"offer_attempts_per_adopter": 2, "Super_gain_rate": 0.02, "Super_loss_rate": 0.004, "Max_loss_rate": 0.003},
+      "P2": {"offer_attempts_per_adopter": 1, "Free_gain_rate": 0.005, "Free_loss_rate": 0.002, "Super_loss_rate": 0.001, "Max_loss_rate": 0.001}
+    },
+    "base": {
+      "label": "D reference response intensity; not most likely",
+      "exposure_probability": 0.85, "adoption_given_exposure": 0.4,
+      "success_probability": 0.85, "successful_service_minutes": 3.0, "failed_service_minutes": 0.75,
+      "effective_minutes_per_success": 2.5,
+      "P1": {"offer_attempts_per_adopter": 6, "Super_gain_rate": 0.04, "Super_loss_rate": 0.01, "Max_loss_rate": 0.006},
+      "P2": {"offer_attempts_per_adopter": 2, "Free_gain_rate": 0.015, "Free_loss_rate": 0.004, "Super_loss_rate": 0.002, "Max_loss_rate": 0.002}
+    },
+    "high": {
+      "label": "D high response intensity; higher use can lower net value",
+      "exposure_probability": 0.95, "adoption_given_exposure": 0.6,
+      "success_probability": 0.92, "successful_service_minutes": 4.0, "failed_service_minutes": 1.0,
+      "effective_minutes_per_success": 3.5,
+      "P1": {"offer_attempts_per_adopter": 12, "Super_gain_rate": 0.08, "Super_loss_rate": 0.018, "Max_loss_rate": 0.01},
+      "P2": {"offer_attempts_per_adopter": 4, "Free_gain_rate": 0.03, "Free_loss_rate": 0.007, "Super_loss_rate": 0.004, "Max_loss_rate": 0.004}
+    }
+  },
+  "sensitivity": {
+    "P1_gain_rates": [0.0, 0.01, 0.02, 0.04, 0.08, 0.15],
+    "P1_loss_rates": [0.0, 0.003, 0.006, 0.012, 0.018, 0.03],
+    "P2_gain_rates": [0.0, 0.005, 0.015, 0.03, 0.06, 0.1],
+    "P2_loss_rates": [0.0, 0.002, 0.004, 0.007, 0.01, 0.015],
+    "unit_costs_usd_per_service_minute": [0.0, 0.02, 0.04, 0.06, 0.1],
+    "basis": "D scan values, not empirical bounds; reference offer workload held fixed; paid-path workload changes with gain/loss. No probabilities or confidence intervals. No real-world robust ranking."
+  }
+}
